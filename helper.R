@@ -2,16 +2,32 @@
 ##  file  [character] file path to taskview .md file.
 ## Returns:
 ##  vector with package names that are listed in the task view.
-extract_pkgs = function(file) {
+extract_cran = function(file) {
   ll = readLines(file)
-  pkg_strings = ll[grepl("\\[\\S*\\]\\(https://CRAN.*\\)", ll)]
+  pkg_strings1 = ll[grepl("\\[\\S*?\\]\\(https://CRAN", ll)]
 
   ## extract package names
-  pkgs = gsub(".*\\[(\\S*)\\].*", "\\1", pkg_strings)
+  pkg_strings2 = unlist(stringr::str_extract_all(pkg_strings1, "\\[\\S*?\\]\\(https://CRAN"))
+  pkgs = gsub(".*\\[(\\S*)\\].*", "\\1", pkg_strings2)
 
   ## extract links to CRAN
   #links = gsub(".*\\]\\((\\S*)\\).*", "\\1", pkg_strings)
 
+  ## return package names
+  pkgs
+}
+
+extract_github = function(file) {
+  ll = readLines(file)
+  pkg_strings1 = ll[grepl("\\[\\S*?\\]\\(https://github", ll)]
+  
+  ## extract package names
+  pkg_strings2 = unlist(stringr::str_extract_all(pkg_strings1, "\\[\\S*?\\]\\(https://github"))
+  pkgs = gsub(".*\\[(\\S*)\\].*", "\\1", pkg_strings2)
+  
+  ## extract links to CRAN
+  #links = gsub(".*\\]\\((\\S*)\\).*", "\\1", pkg_strings)
+  
   ## return package names
   pkgs
 }

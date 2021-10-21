@@ -41,21 +41,7 @@ and simulation-based methods for power analysis, as well as several more
 general simulation packages that are useful for power analysis.
 
 This Task View page hopes to make it easier to find sample size
-functionality in R, and has the following sections:
-
-**<u>Specific models/methods/tests (ordered alphabetically)</u>**
-
-**<u>General simulation packages useful for power analysis</u>** 
-
-**<u>Reporting power analysis</u>**
-
-**<u>Discipline specific solutions</u>**
-
-**<u>CRAN packages:</u>**
-
-**<u>Related links</u>**
-
-*<u>Please let us know</u>* if we have omitted something of importance,
+functionality in R. *<u>Please let us know</u>* if we have omitted something of importance,
 for instance a new package that should be mentioned here (rwebster AT
 cheo DOT on DOT ca).
 
@@ -179,7 +165,7 @@ ordered alphabetically by statistical test.
 
 -   **Cochran-Mantel-Haenszel Test:**
 
-    -   [sampsizeCMH](https://CRAN.R-Project.org/package=sampsizeCMH) calculates the power and sample size for
+    -   [samplesizeCMH](https://CRAN.R-Project.org/package=samplesizeCMH) calculates the power and sample size for
         Cochran-Mantel-Haenszel tests, with several helper functions for
         working with probability, odds, relative risk, and odds ratio
         values.
@@ -371,7 +357,7 @@ ordered alphabetically by statistical test.
         and models fit by generalized least squares and generalized
         estimating equations)
 
-    -   [powerlmm](https://CRAN.R-Project.org/package=powerlmm) (Calculate power for the 'time x treatment' effect
+    -   [powerlmm](https://github.com/rpsychologist/powerlmm) (Calculate power for the 'time x treatment' effect
         in two- and three-level multilevel longitudinal studies with
         missing data. Studies with partially nested designs, unequal
         cluster sizes, unequal allocation to treatment arms, and
@@ -418,7 +404,7 @@ ordered alphabetically by statistical test.
     -   [metapower](https://CRAN.R-Project.org/package=metapower) (Power for meta-analysis, including power analysis
         of main effects)
 
-    -   [metameta](https://CRAN.R-Project.org/package=metameta) (Github package for re-analyzing published
+    -   [metameta](https://github.com/dsquintana/metameta) (Github package for re-analyzing published
         meta-analysis, including calculating power for each study in a
         meta-analysis.)
 
@@ -514,7 +500,7 @@ ordered alphabetically by statistical test.
 
     -   [MKpower](https://CRAN.R-Project.org/package=MKpower) contains methods for one-sample proportion tests
         while [PASSED](https://CRAN.R-Project.org/package=PASSED) contains methods for two, while
-        [PowerAnalysis](https://CRAN.R-Project.org/package=PowerAnalysis), [pwr](https://CRAN.R-Project.org/package=pwr), [pwr2ppl](https://CRAN.R-Project.org/package=pwr2ppl), and [WebPower](https://CRAN.R-Project.org/package=WebPower) support both.
+        [powerAnalysis](https://CRAN.R-Project.org/package=powerAnalysis), [pwr](https://CRAN.R-Project.org/package=pwr), [pwr2ppl](https://CRAN.R-Project.org/package=pwr2ppl), and [WebPower](https://CRAN.R-Project.org/package=WebPower) support both.
 
     -   [binomSamSize](https://CRAN.R-Project.org/package=binomSamSize) (compute confidence intervals and necessary
         sample sizes for the parameter *p* of the Bernoulli B(p)
@@ -532,40 +518,40 @@ ordered alphabetically by statistical test.
         level of power, given a prespecified null and alternative
         hypothesis.)
 
-**Randomized Controlled Trial**
+-   **Randomized Controlled Trials**
 
--   [CP](https://CRAN.R-Project.org/package=CP) (for condition power for different models in survival time
+	-   [CP](https://CRAN.R-Project.org/package=CP) (for condition power for different models in survival time
     analysis within RCT's with two different treatments to be compared
     and survival as an endpoint)
 
--   [odr](https://CRAN.R-Project.org/package=odr) (perform power analyses with and without accommodating cost
+	-   [odr](https://CRAN.R-Project.org/package=odr) (perform power analyses with and without accommodating cost
     structures of sampling for experimental studies under a budget
     constraint)
 
--   [powerCompRisk](https://CRAN.R-Project.org/package=powerCompRisk) (2-group comparisons cause-specific hazard and the
-    all-cause hazard sample size calculations using an asymptotic
+	-   [powerCompRisk](https://CRAN.R-Project.org/package=powerCompRisk) (2-group comparisons cause-specific hazard and the
+	all-cause hazard sample size calculations using an asymptotic
     chi-square joint test, accounting for censoring (e.g., lost to
     follow-up, staggered entry and administrative censoring))
 
--   [RCT](https://CRAN.R-Project.org/package=RCT) (Computes the minimum population needed to detect difference
+	-   [RCT](https://CRAN.R-Project.org/package=RCT) (Computes the minimum population needed to detect difference
     between control group and each treatment, given a target minimum
     detectable effect)
 
--   [Sample.Size](https://CRAN.R-Project.org/package=Sample.Size) (Computes the required sample size using the optimal
+	-   [Sample.Size](https://CRAN.R-Project.org/package=Sample.Size) (Computes the required sample size using the optimal
     designs with multiple constraints. This optimal method is designed
     for two-arm, randomized phase II clinical trials, and the required
     sample size can be optimized either using fixed or flexible
     randomization allocation ratios.)
 
--   [SampleSize4ClinicalTrials](https://CRAN.R-Project.org/package=SampleSize4ClinicalTrials) (calculate sample size when comparing
+	-   [SampleSize4ClinicalTrials](https://CRAN.R-Project.org/package=SampleSize4ClinicalTrials) (calculate sample size when comparing
     means or proportions in Phase III clinical trials with different
     research goals)
 
--   [smartsizer](https://CRAN.R-Project.org/package=smartsizer) (Set of tools for determining the necessary sample
+	-   [smartsizer](https://CRAN.R-Project.org/package=smartsizer) (Set of tools for determining the necessary sample
     size in order to identify the optimal dynamic treatment regime in a
     sequential, multiple assignment, randomized trial (SMART))
 
--   [ssev](https://CRAN.R-Project.org/package=ssev) (computes the optimal sample size for various 2-group
+	-   [ssev](https://CRAN.R-Project.org/package=ssev) (computes the optimal sample size for various 2-group
     designs (e.g., when comparing the means of two groups assuming equal
     variances, unequal variances, or comparing proportions) when the aim
     is to maximize the rewards over the full decision procedure of a)
@@ -573,7 +559,7 @@ ordered alphabetically by statistical test.
     administering the winning treatment to the remaining N-n units in
     the population.)
 
--   [odr](https://CRAN.R-Project.org/package=odr) performs power analyses with and without accommodating cost
+	-   [odr](https://CRAN.R-Project.org/package=odr) performs power analyses with and without accommodating cost
     structures of sampling for experimental studies under a budget
     constraint for multisite RCTs. [WebPower](https://CRAN.R-Project.org/package=WebPower) also supports multisite
     RCTs.
@@ -609,46 +595,44 @@ ordered alphabetically by statistical test.
 
     -   [WebPower](https://CRAN.R-Project.org/package=WebPower) 
 
--   **Adaptive Study Design**
+	-   **Adaptive Study Design**
 
-    -   [Spass](https://CRAN.R-Project.org/package=Spass), [esDesign](https://CRAN.R-Project.org/package=esDesign) (sample size calculation where eligibility
-        criteria of the trial is adaptively updated)
+			-   [spass](https://CRAN.R-Project.org/package=spass), [esDesign](https://CRAN.R-Project.org/package=esDesign) (sample size calculation where eligibility criteria of the trial is adaptively updated)
+		-   **Equivalence trial**
 
--   **Equivalence trial**
-
-    -   [epiR](https://CRAN.R-Project.org/package=epiR) (sample size for parallel equivalence trial with binary
+			-   [epiR](https://CRAN.R-Project.org/package=epiR) (sample size for parallel equivalence trial with binary
         or continuous outcome)
 
--   **Non-Inferiority Trial**
+	-   **Non-Inferiority Trial**
 
-    -   [epiR](https://CRAN.R-Project.org/package=epiR) (binary or continuous outcome)
+			-   [epiR](https://CRAN.R-Project.org/package=epiR) (binary or continuous outcome)
 
-    -   [blindrecalc](https://CRAN.R-Project.org/package=blindrecalc) (computation of key characteristics and plots
+			-   [blindrecalc](https://CRAN.R-Project.org/package=blindrecalc) (computation of key characteristics and plots
         for blinded sample size recalculation, including powero.
         Continuous and binary endpoints are supported)
 
 -   **Sequential Multiple Assignment Randomized Trial (SMART)**
 
-    -   [SMARTbayesR](https://CRAN.R-Project.org/package=SMARTbayesR) (optimal dynamic treatment regimes and sample
+			-   [SMARTbayesR](https://CRAN.R-Project.org/package=SMARTbayesR) (optimal dynamic treatment regimes and sample
         size for a SMART design in the Bayesian setting)
 
-    -   [SMARTp](https://CRAN.R-Project.org/package=SMARTp) (Sample size calculation to detect dynamic treatment
+			-   [SMARTp](https://CRAN.R-Project.org/package=SMARTp) (Sample size calculation to detect dynamic treatment
         regime (DTR) effects based on change in clinical attachment
         level (CAL) outcomes from a non-surgical chronic periodontitis
         treatments study. The clustered tooth (sub-unit) level CAL
         outcomes are skewed, spatially-referenced, and non-randomly
         missing.)
+	
+	-   **Superiority Trial**
 
--   **Superiority Trial**
-
-    -   [blindrecalc](https://CRAN.R-Project.org/package=blindrecalc) (computation of key characteristics and plots
+			-   [blindrecalc](https://CRAN.R-Project.org/package=blindrecalc) (computation of key characteristics and plots
         for blinded sample size recalculation, including power.
         Continuous and binary endpoints are supported)
 
-    -   [epiR](https://CRAN.R-Project.org/package=epiR) (sample size for parallel superiority trial with binary
-        or continuous outcome)
+			-   [epiR](https://CRAN.R-Project.org/package=epiR) (sample size for parallel superiority trial with binary
+			or continuous outcome)
 
-    -   [MIDN](https://CRAN.R-Project.org/package=MIDN) (Nearly exact sample size calculation for exact
+			-   [MIDN](https://CRAN.R-Project.org/package=MIDN) (Nearly exact sample size calculation for exact
         powerful nonrandomized tests for differences between binomial
         proportions)
 
@@ -678,7 +662,7 @@ ordered alphabetically by statistical test.
 
 -   **Regression Discontinuity (RD) Design**
 
-    -   Both [rdpower](https://CRAN.R-Project.org/package=rdpower) and [rddapp](https://CRAN.R-Project.org/package=rddapp) provide tools to perform power,
+    -   Both [rdpower](https://CRAN.R-Project.org/package=rdpower) and [rddapp](https://github.com/felixthoemmes/rddapp) provide tools to perform power,
         sample size and MDE calculations in RD designs.
 
 -   **Repertory Grid Studies**
@@ -690,21 +674,12 @@ ordered alphabetically by statistical test.
 
 -   **Sib Pair Design**
 
-    -   
-
--   [powerpkg](https://CRAN.R-Project.org/package=powerpkg) computes power of an affected sib pair design. **Sign
+	-   [powerpkg](https://CRAN.R-Project.org/package=powerpkg) computes power of an affected sib pair design. **Sign
     Test**
 
     -   [FDRsampsize](https://CRAN.R-Project.org/package=FDRsampsize) provides methods for microarray studies that use
         the false discovery rate as the final measure of statistical
         significance.
-
--   **Single Arm Trial that uses previous trials as historical control**
-
-    -   [HCT](https://CRAN.R-Project.org/package=HCT) (Given a database of previous treatment/placebo
-        estimates, their standard errors and sample sizes, the program
-        calculates a significance criteria and power estimate that takes
-        into account the among trial variation.)
 
 -   **Sobel Test**
 
@@ -727,9 +702,6 @@ ordered alphabetically by statistical test.
         or missing data handling and planning.
 
 -   **Survival analysis**
-
-    -   [Coprimary](https://CRAN.R-Project.org/package=Coprimary) provides sample size calculation for two primary
-        time-to-event endpoints in clinical trials
 
     -   [powerMediation](https://CRAN.R-Project.org/package=powerMediation) calculates power for testing a mediation
         effect in cox regression based on Vittinghoff, Sen &
@@ -828,69 +800,8 @@ the **<u>Specific models/methods/tests</u>** section above.
 
 -   [DeclareDesign](https://CRAN.R-Project.org/package=DeclareDesign) provides a general framework for specifying research designs, simulated based on specified designs, and assessing various properties of the designs, including but not limited to power.
 
--   [simpr](https://github.com/simpr) is a GitHub R package that has a framework to data simulation—based on the tidyverse / broom syntax—and can perform power calculations
+-   [simpr](https://github.com/statisfactions/simpr) is a GitHub R package that has a framework to data simulation—based on tidyverse / broom syntax—and can perform power calculations
 
--   Various general-purpose MonteCarlo simulation packages exists, including the [simulator](https://CRAN.R-Project.org/package=simulator), [MonteCarlo](https://CRAN.R-Project.org/package=MonteCarlo), and others.
+-   Various general-purpose MonteCarlo simulation packages exist, including [MonteCarlo](https://CRAN.R-Project.org/package=MonteCarlo) and [simstudy](https://CRAN.R-Project.org/package=simstudy).
 
-#### Related links
-
-· Tutorial: [WebPower](https://webpower.psychstat.org/wiki/) is a forum
-with a Stack Overflow like feature for asking questions about power
-calculations in R. WebPower also has [extensive educational documents
-for many tests](https://webpower.psychstat.org/wiki/models/index). Click
-on a test name and then select ‘Parameter:help’.
-
-· Tutorial: [useR! 2020: simpr: concise and readable simulations for the
-tidyverse (E. Brown)](https://www.youtube.com/watch?v=MkfMSe9re2U)
-
-· Tutorial: Precision calculation
-<https://jonlefcheck.net/2015/03/31/how-much-is-enough-a-new-technique-for-quantifying-precision-of-community-surveys/>
-
-· Tutorial: simulating power for a Longitudinal Markov Ordinal Outcome
-Trials <https://hbiostat.org/R/Hmisc/markov/sim.pdf> and
-<https://hbiostat.org/R/Hmisc/markov/funs.r>
-
-· Tutorial: Power calculation for statistical interactions
-<https://statmodeling.stat.columbia.edu/2018/03/15/need-16-times-sample-size-estimate-interaction-estimate-main-effect/>
-
-· Tutorial: [Cross
-Validation](https://stats.stackexchange.com/questions/tagged/statistical-power)
-tags for statistical power
-
-· Journal article: Lenth, R. V. (2001), “Some Practical Guidelines for
-Effective Sample Size Determination,” *The American Statistician*, 55,
-187-193.
-
-· Journal article: Hoenig, John M. and Heisey, Dennis M. (2001), “The
-Abuse of Power: The Pervasive Fallacy of Power Calculations for Data
-Analysis,” *The American Statistician*, 55, 19-24.
-
-· Book: Zhang, Z., & Yuan, K.-H. (2018). [Practical Statistical Power
-Analysis Using Webpower and R](https://amzn.to/2V42nFp) (Eds). Granger,
-IN: ISDSA Press.
-
-· Book: Liu, X. S. (2013). [Statistical Power Analysis for the Social
-and Behavioral Sciences: Basic and Advanced
-Techniques](http://www.amazon.com/gp/product/1848729812/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1848729812&linkCode=as2&tag=pyschstatorg-20).
-Routledge.
-
-Online Book: Blair, G., Coppock, A., & Humphreys, M. (in press).
-Research Design: Declare, Diagnose, Redesign. Draft manuscript under
-advance contract, Princeton University Press. Available at
-<https://book.declaredesign.org/>
-
-**RCT with multiple co-primary endpoints** (based on z-test):
-mpe::power.known.var
-
-<!-- <https://cran.r-project.org/web/packages/mpe/> -->
-
-**TOSTER:** Power analysis for TOST (Two one-sided tests) for difference
-between two proportions using Z-test (pooled)
-
--   Two one-sided tests procedure to test equivalence for t-tests,
-    correlations, differences between proportions, and meta-analyses,
-    including power analysis for t-tests and correlations. Allows you to
-    specify equivalence bounds in raw scale units or in terms of effect
-    sizes. See: Lakens (2017) .
-
-**SteppedPower**: Power analysis for two sample z-test
+<!-- Links Moved to Separate document, ctv-power-links.md -->
