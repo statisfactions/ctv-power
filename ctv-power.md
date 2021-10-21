@@ -66,25 +66,25 @@ ordered alphabetically by statistical test.
 
 -   **Adaptive Study Design**
 
-    -   [spass](https://cran.r-project.org/package=spass), [esDesign](https://CRAN.R-Project.org/package=esDesign) 
+    -   [spass](https://CRAN.R-Project.org/package=spass), [esDesign](https://CRAN.R-Project.org/package=esDesign) 
 
 -   **Algorithm Optimization**
 
-    -   [CAISEr](https://cran.r-project.org/package=CAISEr) determines the sample size required for comparing the
+    -   [CAISEr](https://CRAN.R-Project.org/package=CAISEr) determines the sample size required for comparing the
         performance of a set of *k* algorithms on a given problem
         instance when power inaccuracy is predefined
 
 -   **ANCOVA**
 
-    -   [pwr2ppl](https://cran.r-project.org/package=pwr2ppl) computes power for one or two factor ANCOVA with a
+    -   [pwr2ppl](https://CRAN.R-Project.org/package=pwr2ppl) computes power for one or two factor ANCOVA with a
         single covariate
 
 -   **ANOVA:**
 
-    -   General options include [pwr](https://cran.r-project.org/package=pwr) (one-way ANOVA), [pwr2](https://cran.r-project.org/package=pwr2) &
-        [pwr2ppl](https://cran.r-project.org/package=pwr2ppl) (up to two-way ANOVA) and [WebPower](https://cran.r-project.org/package=WebPower) (up to
-        two-way and repeated measures). The [easypower](https://cran.r-project.org/package=easypower) package, based
-        on the [pwr](https://cran.r-project.org/package=pwr) package, simplifies the user input for factorial
+    -   General options include [pwr](https://CRAN.R-Project.org/package=pwr) (one-way ANOVA), [pwr2](https://CRAN.R-Project.org/package=pwr2) &
+        [pwr2ppl](https://CRAN.R-Project.org/package=pwr2ppl) (up to two-way ANOVA) and [WebPower](https://CRAN.R-Project.org/package=WebPower) (up to
+        two-way and repeated measures). The [easypower](https://CRAN.R-Project.org/package=easypower) package, based
+        on the [pwr](https://CRAN.R-Project.org/package=pwr) package, simplifies the user input for factorial
         ANOVA.
 
     -   [BUCSS](https://CRAN.R-Project.org/package=BUCSS) allows any number of factors, using uncertainty and
@@ -826,18 +826,11 @@ of the analytical solution are not met. General packages helpful for
 simulation are shown below; method-specific packages are integrated into
 the **<u>Specific models/methods/tests</u>** section above.
 
--   [DeclareDesign](https://CRAN.R-Project.org/package=DeclareDesign) provides a general framework for specifying
-    > research designs, simulated based on specified designs, and
-    > assessing various properties of the designs, including but not
-    > limited to power.
+-   [DeclareDesign](https://CRAN.R-Project.org/package=DeclareDesign) provides a general framework for specifying research designs, simulated based on specified designs, and assessing various properties of the designs, including but not limited to power.
 
--   [simpR](https://CRAN.R-Project.org/package=simpR) is a GitHub R package that has a framework to data
-    > simulation—based on the tidyverse / broom syntax—and can perfrom
-    > power calculations
+-   [simpr](https://github.com/simpr) is a GitHub R package that has a framework to data simulation—based on the tidyverse / broom syntax—and can perform power calculations
 
 -   Various general-purpose MonteCarlo simulation packages exists, including the [simulator](https://CRAN.R-Project.org/package=simulator), [MonteCarlo](https://CRAN.R-Project.org/package=MonteCarlo), and others.
-
-#### CRAN packages:
 
 #### Related links
 
@@ -886,20 +879,10 @@ Research Design: Declare, Diagnose, Redesign. Draft manuscript under
 advance contract, Princeton University Press. Available at
 <https://book.declaredesign.org/>
 
-· Book:
-
-· GitHub Project:
-
-· GitHub Project:
-
-· GitHub Project:
-
-**GitHub:**
-
 **RCT with multiple co-primary endpoints** (based on z-test):
-**mpe**::power.known.var
+mpe::power.known.var
 
-<https://cran.r-project.org/web/packages/mpe/>
+<!-- <https://cran.r-project.org/web/packages/mpe/> -->
 
 **TOSTER:** Power analysis for TOST (Two one-sided tests) for difference
 between two proportions using Z-test (pooled)
@@ -911,13 +894,3 @@ between two proportions using Z-test (pooled)
     sizes. See: Lakens (2017) .
 
 **SteppedPower**: Power analysis for two sample z-test
-
-Neural networks
-
-?? <https://cran.r-project.org/web/packages/DChaos/DChaos.pdf>
-
-?? <https://cran.r-project.org/web/packages/brnn/brnn.pdf>
-
-PCA:
-
-?? <https://cran.r-project.org/web/packages/nsprcomp/readme/README.html>
