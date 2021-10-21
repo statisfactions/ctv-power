@@ -4,7 +4,7 @@
 ##  vector with package names that are listed in the task view.
 extract_pkgs = function(file) {
   ll = readLines(file)
-  pkg_strings = ll[grepl("\\[\\S*\\]\\(https://cran.*\\)", ll)]
+  pkg_strings = ll[grepl("\\[\\S*\\]\\(https://CRAN.*\\)", ll)]
 
   ## extract package names
   pkgs = gsub(".*\\[(\\S*)\\].*", "\\1", pkg_strings)
@@ -14,6 +14,18 @@ extract_pkgs = function(file) {
 
   ## return package names
   pkgs
+}
+
+## Corrects mismatched packages, given a vector of replacements.
+## Mainly used right now for corrected case issues
+## Rewrites out to same file
+correct_packages = function(file, replacements) {
+  ll = readLines(file)
+  
+  ll_out = stringr::str_replace_all(ll, replacements)
+  
+  writeLines(ll_out, con = file)
+
 }
 
 ## function that, given a package name, returns the email of the maintainer

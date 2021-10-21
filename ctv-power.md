@@ -106,7 +106,7 @@ ordered alphabetically by statistical test.
 
 -   **Bayesian:**
 
-    -   [Bayescount](https://CRAN.R-Project.org/package=Bayescount) provides analysis and power calculations for
+    -   [bayescount](https://CRAN.R-Project.org/package=bayescount) provides analysis and power calculations for
         count data.
 
     -   [BayesESS](https://CRAN.R-Project.org/package=BayesESS) determines effective sample size of a parametric
@@ -155,7 +155,7 @@ ordered alphabetically by statistical test.
         characteristics of bioequivalence studies in Two-Stage Designs
         (TSD) via simulations.)
 
-    -   [powerTOST](https://CRAN.R-Project.org/package=powerTOST) (Calculate power and sample size for various study
+    -   [PowerTOST](https://CRAN.R-Project.org/package=PowerTOST) (Calculate power and sample size for various study
         designs used in bioequivalence studies)
 
 -   **Case-Control study:**
@@ -168,9 +168,9 @@ ordered alphabetically by statistical test.
         enables the correlates of risk results to be interpreted in
         terms of potential correlates of efficacy/protection)
 
-    -   [EpiR](https://CRAN.R-Project.org/package=EpiR) (sample size, power, and detectable odds ratio)
+    -   [epiR](https://CRAN.R-Project.org/package=epiR) (sample size, power, and detectable odds ratio)
 
-    -   [Samplesizelogisticcasecontrol](https://CRAN.R-Project.org/package=Samplesizelogisticcasecontrol) (determine sample size for
+    -   [samplesizelogisticcasecontrol](https://CRAN.R-Project.org/package=samplesizelogisticcasecontrol) (determine sample size for
         case-control studies to be analyzed using logistic regression)
 
 -   **Chi-squared test:**
@@ -192,7 +192,7 @@ ordered alphabetically by statistical test.
 
 -   **Complex Surveys**
 
-    -   [Samplesize4surveys](https://CRAN.R-Project.org/package=Samplesize4surveys) (computes the required sample size for
+    -   [samplesize4surveys](https://CRAN.R-Project.org/package=samplesize4surveys) (computes the required sample size for
         estimation of totals, means, and proportions under complex
         sampling designs)
 
@@ -203,7 +203,7 @@ ordered alphabetically by statistical test.
 
 -   **Cross-sectional study**
 
-    -   [EpiR](https://CRAN.R-Project.org/package=EpiR) (sample size, power, or detectable prevalence)
+    -   [epiR](https://CRAN.R-Project.org/package=epiR) (sample size, power, or detectable prevalence)
 
 -   **Diagnostic Test**
 
@@ -241,7 +241,7 @@ ordered alphabetically by statistical test.
         sizes required based on the Boschloo’s technique and
         Fisher-Boschloo test mid-N estimates.
 
-    -   [Ssanv](https://CRAN.R-Project.org/package=Ssanv) provides a calibrated power calculation by leveraging
+    -   [ssanv](https://CRAN.R-Project.org/package=ssanv) provides a calibrated power calculation by leveraging
         the uncertainty in either nonadherence or parameter estimation.
 
 -   **Gamma Distribution**
@@ -257,10 +257,10 @@ ordered alphabetically by statistical test.
     -   [genpwr](https://CRAN.R-Project.org/package=genpwr) (for genetic association studies, considering the
         impact of misspecification of the genetic model.)
 
-    -   [PbatR](https://CRAN.R-Project.org/package=PbatR) (Pedigree/Family-Based Genetic Association Tests
+    -   [pbatR](https://CRAN.R-Project.org/package=pbatR) (Pedigree/Family-Based Genetic Association Tests
         Analysis and Power)
 
-    -   [PowerGWASinteraction](https://CRAN.R-Project.org/package=PowerGWASinteraction) (Analytical power calculations for GxE
+    -   [powerGWASinteraction](https://CRAN.R-Project.org/package=powerGWASinteraction) (Analytical power calculations for GxE
         and GxG interactions for case-control studies of candidate genes
         and genome-wide association studies (GWAS). This includes power
         calculation for four two-step screening and testing procedures.
@@ -315,7 +315,7 @@ ordered alphabetically by statistical test.
 
 -   **Interobserver Agreement Studies**
 
-    -   [KappaSize](https://CRAN.R-Project.org/package=KappaSize) (basic tools for sample size estimation in studies
+    -   [kappaSize](https://CRAN.R-Project.org/package=kappaSize) (basic tools for sample size estimation in studies
         of interob-server/interrater agreement (reliability). Includes
         functions for both the power-based and confi-dence
         interval-based methods, with binary or multinomial outcomes and
@@ -338,7 +338,7 @@ ordered alphabetically by statistical test.
 
 -   **Local Average Treatment Effect (LATE)**
 
-    -   [PowerLATE](https://CRAN.R-Project.org/package=PowerLATE) (An implementation of the generalized power
+    -   [powerLATE](https://CRAN.R-Project.org/package=powerLATE) (An implementation of the generalized power
         analysis for the local average treatment effect (LATE). The
         method uses standardized effect sizes to place a conservative
         bound on the power under minimal assumptions. Package allows
@@ -350,7 +350,7 @@ ordered alphabetically by statistical test.
 
 -   **Logistic Regression**
 
-    -   [Pwr2ppl](https://CRAN.R-Project.org/package=Pwr2ppl), [powerMediation](https://CRAN.R-Project.org/package=powerMediation) and [WebPower](https://CRAN.R-Project.org/package=WebPower) calculates power
+    -   [pwr2ppl](https://CRAN.R-Project.org/package=pwr2ppl), [powerMediation](https://CRAN.R-Project.org/package=powerMediation) and [WebPower](https://CRAN.R-Project.org/package=WebPower) calculates power
         for simple logistic regression with binary/continuous predictors
 
     -   [simr](https://CRAN.R-Project.org/package=simr) provides simulated power calculations.
@@ -383,7 +383,7 @@ ordered alphabetically by statistical test.
         changes for 2 groups are the same or not for longitudinal study
         with 2 or more time point.)
 
-    -   [Ssrm.logmer](https://CRAN.R-Project.org/package=Ssrm.logmer) (sample size for a longitudinal study with
+    -   [ssrm.logmer](https://CRAN.R-Project.org/package=ssrm.logmer) (sample size for a longitudinal study with
         binary outcome in order to attain a pre-specified power while
         strictly maintaining the Type I error rate.)
 
@@ -428,7 +428,7 @@ ordered alphabetically by statistical test.
         microarray studies that use the false discovery rate as the
         final measure of statistical significance)
 
-    -   [Ssize.fdr](https://CRAN.R-Project.org/package=Ssize.fdr) (This package contains a set of functions that
+    -   [ssize.fdr](https://CRAN.R-Project.org/package=ssize.fdr) (This package contains a set of functions that
         calculates appropriate sample sizes for one-sample t-tests,
         two-sample t-tests, and F-tests for microarray experiments based
         on desired power while controlling for false discovery rates.)
@@ -467,7 +467,7 @@ ordered alphabetically by statistical test.
 
 -   **Multivariable Prediction Model**
 
-    -   [Pmsampsize](https://CRAN.R-Project.org/package=Pmsampsize) computes the minimum sample size required for the
+    -   [pmsampsize](https://CRAN.R-Project.org/package=pmsampsize) computes the minimum sample size required for the
         development of a new multivariable prediction model. Can be used
         to calculate the minimum sample size for the development of
         models with continuous, binary or survival (time-to-event)
@@ -475,7 +475,7 @@ ordered alphabetically by statistical test.
 
 -   **Pearson Correlation**
 
-    -   [WebPower](https://CRAN.R-Project.org/package=WebPower), [pwr](https://CRAN.R-Project.org/package=pwr) and [Pwr2ppl](https://CRAN.R-Project.org/package=Pwr2ppl) all contain methods for power
+    -   [WebPower](https://CRAN.R-Project.org/package=WebPower), [pwr](https://CRAN.R-Project.org/package=pwr) and [pwr2ppl](https://CRAN.R-Project.org/package=pwr2ppl) all contain methods for power
         analysis of correlations.
 
 -   **Pharmacokinetic Study Design:**
@@ -512,11 +512,11 @@ ordered alphabetically by statistical test.
         sample size calculation for common designs in clinical trials
         including one- and two-sample binary and normal responses)
 
-    -   [MKPower](https://CRAN.R-Project.org/package=MKPower) contains methods for one-sample proportion tests
+    -   [MKpower](https://CRAN.R-Project.org/package=MKpower) contains methods for one-sample proportion tests
         while [PASSED](https://CRAN.R-Project.org/package=PASSED) contains methods for two, while
         [PowerAnalysis](https://CRAN.R-Project.org/package=PowerAnalysis), [pwr](https://CRAN.R-Project.org/package=pwr), [pwr2ppl](https://CRAN.R-Project.org/package=pwr2ppl), and [WebPower](https://CRAN.R-Project.org/package=WebPower) support both.
 
-    -   [BinomSamSize](https://CRAN.R-Project.org/package=BinomSamSize) (compute confidence intervals and necessary
+    -   [binomSamSize](https://CRAN.R-Project.org/package=binomSamSize) (compute confidence intervals and necessary
         sample sizes for the parameter *p* of the Bernoulli B(p)
         distribution under simple random sampling or under pooled
         sampling. Such computations are e.g. of interest when
@@ -542,7 +542,7 @@ ordered alphabetically by statistical test.
     structures of sampling for experimental studies under a budget
     constraint)
 
--   [PowerCompRisk](https://CRAN.R-Project.org/package=PowerCompRisk) (2-group comparisons cause-specific hazard and the
+-   [powerCompRisk](https://CRAN.R-Project.org/package=powerCompRisk) (2-group comparisons cause-specific hazard and the
     all-cause hazard sample size calculations using an asymptotic
     chi-square joint test, accounting for censoring (e.g., lost to
     follow-up, staggered entry and administrative censoring))
@@ -565,7 +565,7 @@ ordered alphabetically by statistical test.
     size in order to identify the optimal dynamic treatment regime in a
     sequential, multiple assignment, randomized trial (SMART))
 
--   [Ssev](https://CRAN.R-Project.org/package=Ssev) (computes the optimal sample size for various 2-group
+-   [ssev](https://CRAN.R-Project.org/package=ssev) (computes the optimal sample size for various 2-group
     designs (e.g., when comparing the means of two groups assuming equal
     variances, unequal variances, or comparing proportions) when the aim
     is to maximize the rewards over the full decision procedure of a)
@@ -616,14 +616,14 @@ ordered alphabetically by statistical test.
 
 -   **Equivalence trial**
 
-    -   [EpiR](https://CRAN.R-Project.org/package=EpiR) (sample size for parallel equivalence trial with binary
+    -   [epiR](https://CRAN.R-Project.org/package=epiR) (sample size for parallel equivalence trial with binary
         or continuous outcome)
 
 -   **Non-Inferiority Trial**
 
-    -   [EpiR](https://CRAN.R-Project.org/package=EpiR) (binary or continuous outcome)
+    -   [epiR](https://CRAN.R-Project.org/package=epiR) (binary or continuous outcome)
 
-    -   [Blindrecalc](https://CRAN.R-Project.org/package=Blindrecalc) (computation of key characteristics and plots
+    -   [blindrecalc](https://CRAN.R-Project.org/package=blindrecalc) (computation of key characteristics and plots
         for blinded sample size recalculation, including powero.
         Continuous and binary endpoints are supported)
 
@@ -641,7 +641,7 @@ ordered alphabetically by statistical test.
 
 -   **Superiority Trial**
 
-    -   [Blindrecalc](https://CRAN.R-Project.org/package=Blindrecalc) (computation of key characteristics and plots
+    -   [blindrecalc](https://CRAN.R-Project.org/package=blindrecalc) (computation of key characteristics and plots
         for blinded sample size recalculation, including power.
         Continuous and binary endpoints are supported)
 
@@ -683,7 +683,7 @@ ordered alphabetically by statistical test.
 
 -   **Repertory Grid Studies**
 
-    -   [Gridsampler](https://CRAN.R-Project.org/package=Gridsampler) is a simulation tool to facilitate determination
+    -   [gridsampler](https://CRAN.R-Project.org/package=gridsampler) is a simulation tool to facilitate determination
         of required sample size to achieve category saturation for
         studies using multiple repertory grids in conjunction with
         content analysis.
@@ -721,7 +721,7 @@ ordered alphabetically by statistical test.
     -   [semPower](https://CRAN.R-Project.org/package=semPower) provides a-priori, post-hoc, and compromise
         power-analyses for structural equation models (SEM))
 
-    -   [simSEM](https://CRAN.R-Project.org/package=simSEM) provides an easy framework for Monte Carlo simulation
+    -   [simsem](https://CRAN.R-Project.org/package=simsem) provides an easy framework for Monte Carlo simulation
         in structural equation modeling, which can be used for various
         purposes, such as such as model fit evaluation, power analysis,
         or missing data handling and planning.
@@ -763,14 +763,14 @@ ordered alphabetically by statistical test.
 -   **T-Test**
 
     -   Many packages can calculate power for basic one- and two-sample
-        t-tests: [FDRsampsize](https://CRAN.R-Project.org/package=FDRsampsize), [WebPower](https://CRAN.R-Project.org/package=WebPower), [pwr](https://CRAN.R-Project.org/package=pwr), [PASSED](https://CRAN.R-Project.org/package=PASSED), [powerAnalysis](https://CRAN.R-Project.org/package=powerAnalysis), [Samplesize](https://CRAN.R-Project.org/package=Samplesize), [pwr2ppl](https://CRAN.R-Project.org/package=pwr2ppl), [pwrAB](https://CRAN.R-Project.org/package=pwrAB).
+        t-tests: [FDRsampsize](https://CRAN.R-Project.org/package=FDRsampsize), [WebPower](https://CRAN.R-Project.org/package=WebPower), [pwr](https://CRAN.R-Project.org/package=pwr), [PASSED](https://CRAN.R-Project.org/package=PASSED), [powerAnalysis](https://CRAN.R-Project.org/package=powerAnalysis), [samplesize](https://CRAN.R-Project.org/package=samplesize), [pwr2ppl](https://CRAN.R-Project.org/package=pwr2ppl), [pwrAB](https://CRAN.R-Project.org/package=pwrAB).
 
     -   [PowerTOST](https://CRAN.R-Project.org/package=PowerTOST) calculates power for the two-one-sided t-test
 
     -   Simulate power through [MKpower](https://CRAN.R-Project.org/package=MKpower) for classical (equal
         variances), Welch and Hsu T-tests.
 
-    -   [SsizeRNA](https://CRAN.R-Project.org/package=SsizeRNA) (appropriate sample sizes for two-sample t-test for
+    -   [ssizeRNA](https://CRAN.R-Project.org/package=ssizeRNA) (appropriate sample sizes for two-sample t-test for
         RNA-seq experiments with fixed or varied set of parameters)
 
     -   [MKpower](https://CRAN.R-Project.org/package=MKpower) computes power for Welch and Hsu *t-*tests for
@@ -789,7 +789,7 @@ ordered alphabetically by statistical test.
 
 -   **Wald Test**
 
-    -   [steppedPower](https://CRAN.R-Project.org/package=steppedPower) computes power of a Wald Test given a standard
+    -   [SteppedPower](https://CRAN.R-Project.org/package=SteppedPower) computes power of a Wald Test given a standard
         error, an effect size, the degrees of freedom of the
         t-distribution and a significance level
 
@@ -814,7 +814,7 @@ ordered alphabetically by statistical test.
 
     -   [MKpower](https://CRAN.R-Project.org/package=MKpower).
 
-    -   [Samplesize](https://CRAN.R-Project.org/package=Samplesize) (For categorical data. Allows for ties)
+    -   [samplesize](https://CRAN.R-Project.org/package=samplesize) (For categorical data. Allows for ties)
 
 #### General simulation packages useful for power analysis
 

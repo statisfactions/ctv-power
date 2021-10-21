@@ -1,13 +1,22 @@
 source("helper.R")
 
 # get contacts for feedback
-pkgs = extract_pkgs("CRAN_task_view_fda.md")
-not_there <- !(pkgs %in% rownames(available.packages()))
-if (any(not_there)) {
-  cat("###########################")
-  cat(pkgs[not_there])
-  cat("###########################")
-}
+
+# Check available packages -----
+available = rownames(available.packages())
+pkgs = extract_pkgs("ctv-power.md")
+not_there <- !(pkgs %in% available)
+
+missing_pkgs = sort(unique(pkgs[not_there]))
+
+# Correct any issues with cases -----
+case_replacements = available[tolower(available) %in% tolower(case_replacements)]
+names(case_replacements) = missing_pkgs[tolower(missing_pkgs) %in% tolower(available)]
+
+correct_packages("ctv-power.md", case_replacements)
+
+
+
 to_install <- pkgs[!(pkgs %in% rownames(installed.packages()))]
 if (length(to_install)) install.packages(to_install)
 
