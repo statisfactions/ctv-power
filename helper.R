@@ -85,7 +85,7 @@ md2ctv <- function(file = "ctv-power.md", links_file = "ctv-power-links.md", sav
          paste0("<pkg>", uniq_pkgs, "</pkg>"))
   
   # add XML header & footer
-  pkglist = c("<packagelist>", paste0("<pkg>", uniq_pkgs, "</pkg>"), "</packagelist>")
+  pkglist = c("<packagelist>", pkgstrings, "</packagelist>")
   ll = c("<CRANTaskView>", info, "</info>", pkglist,
          "<links>", links, "</links>",
          "</CRANTaskView>")

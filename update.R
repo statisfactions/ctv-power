@@ -7,15 +7,6 @@ available = rownames(available.packages())
 pkgs = extract_pkgs("ctv-power.md")
 not_there <- !(pkgs %in% available)
 
-pkgs_tbl = data.frame(pkgs) %>% 
-  count(pkgs) %>% 
-  filter(n > 1) %>% 
-  arrange(n) 
-
-core_pkgs = pkgs_tbl %>% 
-  filter(n >= 5) %>% 
-  pull(pkgs)
-
 missing_pkgs = sort(unique(pkgs[not_there]))
 missing_pkgs
 

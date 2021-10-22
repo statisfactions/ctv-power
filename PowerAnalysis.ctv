@@ -404,10 +404,10 @@
 <pkg>DelayedEffect.Design</pkg>
 <pkg>easypower</pkg>
 <pkg>EBASS</pkg>
-<pkg>epiR</pkg>
+<pkg priority="core">epiR</pkg>
 <pkg>esDesign</pkg>
 <pkg>Exact</pkg>
-<pkg>FDRsampsize</pkg>
+<pkg priority="core">FDRsampsize</pkg>
 <pkg>genpwr</pkg>
 <pkg>gridsampler</pkg>
 <pkg>GRS.test</pkg>
@@ -423,7 +423,7 @@
 <pkg>metapower</pkg>
 <pkg>MIDN</pkg>
 <pkg>MKmisc</pkg>
-<pkg>MKpower</pkg>
+<pkg priority="core">MKpower</pkg>
 <pkg>MonteCarlo</pkg>
 <pkg>MRTSampleSize</pkg>
 <pkg>MRTSampleSizeBinary</pkg>
@@ -432,7 +432,7 @@
 <pkg>odr</pkg>
 <pkg>pamm</pkg>
 <pkg>pass.lme</pkg>
-<pkg>PASSED</pkg>
+<pkg priority="core">PASSED</pkg>
 <pkg>pbatR</pkg>
 <pkg>PharmPow</pkg>
 <pkg>pmsampsize</pkg>
@@ -443,14 +443,14 @@
 <pkg>powerCompRisk</pkg>
 <pkg>powerGWASinteraction</pkg>
 <pkg>powerLATE</pkg>
-<pkg>powerMediation</pkg>
+<pkg priority="core">powerMediation</pkg>
 <pkg>powerpkg</pkg>
 <pkg>powerSurvEpi</pkg>
 <pkg>PowerTOST</pkg>
 <pkg>PowerUpR</pkg>
-<pkg>pwr</pkg>
+<pkg priority="core">pwr</pkg>
 <pkg>pwr2</pkg>
-<pkg>pwr2ppl</pkg>
+<pkg priority="core">pwr2ppl</pkg>
 <pkg>pwrAB</pkg>
 <pkg>pwrFDR</pkg>
 <pkg>PwrGSD</pkg>
@@ -491,7 +491,7 @@
 <pkg>survSNP</pkg>
 <pkg>swdpwr</pkg>
 <pkg>TrendInTrend</pkg>
-<pkg>WebPower</pkg>
+<pkg priority="core">WebPower</pkg>
 <pkg>WMWssp</pkg>
 </packagelist>
 <links>
