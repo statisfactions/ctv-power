@@ -4,7 +4,7 @@ source("helper.R")
 
 # Check available packages -----
 available = rownames(available.packages())
-pkgs = extract_pkgs("ctv-power.md")
+pkgs = extract_cran("ctv-power.md")
 not_there <- !(pkgs %in% available)
 
 missing_pkgs = sort(unique(pkgs[not_there]))
@@ -20,4 +20,4 @@ missing_pkgs
 out = md2ctv("ctv-power.md", links_file = "ctv-power-links.md")
 
 # check compliance & render HTML ----------
-ctv::ctv2html("PowerAnalysis.xml")
+ctv::ctv2html("PowerAnalysis.ctv")

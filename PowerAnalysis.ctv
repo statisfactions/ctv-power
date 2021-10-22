@@ -19,7 +19,7 @@
 <ul>
 <li><p><strong>Adaptive Study Design</strong></p>
 <ul>
-<li><pkg>esDesign</pkg></li>
+<li><pkg>spass</pkg>, <a href="https://CRAN.R-Project.org/package=esDesign">esDesign</a></li>
 </ul></li>
 <li><p><strong>Algorithm Optimization</strong></p>
 <ul>
@@ -31,7 +31,7 @@
 </ul></li>
 <li><p><strong>ANOVA:</strong></p>
 <ul>
-<li><p>General options include <pkg>pwr</pkg> package, simplifies the user input for factorial ANOVA.</p></li>
+<li><p>General options include <pkg>pwr</pkg> (one-way ANOVA), <a href="https://CRAN.R-Project.org/package=pwr2">pwr2</a> &amp; <a href="https://CRAN.R-Project.org/package=pwr2ppl">pwr2ppl</a> (up to two-way ANOVA) and <a href="https://CRAN.R-Project.org/package=WebPower">WebPower</a> (up to two-way and repeated measures). The <a href="https://CRAN.R-Project.org/package=easypower">easypower</a> package, based on the <a href="https://CRAN.R-Project.org/package=pwr">pwr</a> package, simplifies the user input for factorial ANOVA.</p></li>
 <li><p><pkg>BUCSS</pkg> allows any number of factors, using uncertainty and publication bias correction.</p></li>
 <li><p><pkg>powerbydesign</pkg> provides functions for bootstrapping the power of ANOVA designs based on estimated means and standard deviations of the conditions</p></li>
 <li><p><pkg>powerAnalysis</pkg> only should be used with balanced one-way analysis of variance tests.</p></li>
@@ -43,11 +43,11 @@
 <li><p><pkg>bayescount</pkg> provides analysis and power calculations for count data.</p></li>
 <li><p><pkg>BayesESS</pkg> determines effective sample size of a parametric prior distribution in Bayesian conjugate models (beta-binomial, gamma-exponential, gamma-Poisson, dirichlet-multinomial, normal-normal, inverse chi-squared-normal, inverse-gamma-normal), Bayesian linear and logistic regression models, Bayesian continual reassessment method (CRM), and Bayesian time to event model.</p></li>
 <li><p><pkg>BayesianPower</pkg> determine the required sample size for the evaluation of inequality constrained hypotheses by means of a Bayes factor</p></li>
-<li><p><pkg>SampleSizeProportions</pkg> for estimating proportions, using three different Bayesian criteria in the context of designing an experiment. Functions for calculation of required sample sizes for the Average Length Criterion, the Average Coverage Criterion and the Worst Outcome Criterion. Functions for both the fully Bayesian and the mixed Bayesian/likelihood approaches are provided.</p></li>
+<li><p><pkg>SampleSizeMeans</pkg> calculates sample size requirements for estimating means, and <a href="https://CRAN.R-Project.org/package=SampleSizeProportions">SampleSizeProportions</a> for estimating proportions, using three different Bayesian criteria in the context of designing an experiment. Functions for calculation of required sample sizes for the Average Length Criterion, the Average Coverage Criterion and the Worst Outcome Criterion. Functions for both the fully Bayesian and the mixed Bayesian/likelihood approaches are provided.</p></li>
 </ul></li>
 <li><p><strong>Beta Distribution:</strong></p>
 <ul>
-<li><pkg>BetaPASS</pkg> helps find the power for a given sample size or the sample size given power, when the outcome/response/dependent variable is a proportion or constrained between 0-1, with a beta distribution. <strong>BetaPASS</strong> has functions to plot power curves demonstrated in its vignette.</li>
+<li><pkg>PASSED</pkg> and <a href="https://CRAN.R-Project.org/package=BetaPASS">BetaPASS</a> helps find the power for a given sample size or the sample size given power, when the outcome/response/dependent variable is a proportion or constrained between 0-1, with a beta distribution. <strong>BetaPASS</strong> has functions to plot power curves demonstrated in its vignette.</li>
 </ul></li>
 <li><p><strong>Bioequivalence Study</strong></p>
 <ul>
@@ -62,7 +62,7 @@
 </ul></li>
 <li><p><strong>Chi-squared test:</strong></p>
 <ul>
-<li>Options include <pkg>ssd</pkg>.</li>
+<li>Options include <pkg>powerAnalysis</pkg>, <a href="https://CRAN.R-Project.org/package=pwr">pwr</a>, <a href="https://CRAN.R-Project.org/package=pwr2ppl">pwr2ppl</a>, <a href="https://CRAN.R-Project.org/package=bimetallic">bimetallic</a>, <a href="https://CRAN.R-Project.org/package=ssd">ssd</a>.</li>
 </ul></li>
 <li><p><strong>Cochran-Mantel-Haenszel Test:</strong></p>
 <ul>
@@ -99,7 +99,7 @@
 </ul></li>
 <li><p><strong>Fisher’s Test</strong></p>
 <ul>
-<li><p>Power calculations for differences between binomial proportions can be achieved with <pkg>MIDN</pkg> computes the exact sample sizes required based on the Boschloo’s technique and Fisher-Boschloo test mid-N estimates.</p></li>
+<li><p>Power calculations for differences between binomial proportions can be achieved with <pkg>Exact</pkg> for unconditional exact tests with 2x2 contingency tables. <a href="https://CRAN.R-Project.org/package=MIDN">MIDN</a> computes the exact sample sizes required based on the Boschloo’s technique and Fisher-Boschloo test mid-N estimates.</p></li>
 <li><p><pkg>ssanv</pkg> provides a calibrated power calculation by leveraging the uncertainty in either nonadherence or parameter estimation.</p></li>
 </ul></li>
 <li><p><strong>Gamma Distribution</strong></p>
@@ -151,8 +151,8 @@
 </ul></li>
 <li><p><strong>Linear Regression</strong></p>
 <ul>
-<li><p><pkg>WebPower</pkg> provide analytical power calculations.</p></li>
-<li><p><pkg>simpr</pkg> provided simulated power calculations.</p></li>
+<li><p><pkg>pwr</pkg>, <a href="https://CRAN.R-Project.org/package=powerMediation">powerMediation</a> and <a href="https://CRAN.R-Project.org/package=WebPower">WebPower</a> provide analytical power calculations.</p></li>
+<li><p><pkg>simr</pkg> and <a href="https://github.com/statisfactions/simpr">simpr</a> provided simulated power calculations.</p></li>
 <li><p><pkg>BayesESS</pkg> provided simulated power calculations for Bayesian models</p></li>
 </ul></li>
 <li><p><strong>Local Average Treatment Effect (LATE)</strong></p>
@@ -161,7 +161,7 @@
 </ul></li>
 <li><p><strong>Logistic Regression</strong></p>
 <ul>
-<li><p><pkg>WebPower</pkg> calculates power for simple logistic regression with binary/continuous predictors</p></li>
+<li><p><pkg>pwr2ppl</pkg>, <a href="https://CRAN.R-Project.org/package=powerMediation">powerMediation</a> and <a href="https://CRAN.R-Project.org/package=WebPower">WebPower</a> calculates power for simple logistic regression with binary/continuous predictors</p></li>
 <li><p><pkg>simr</pkg> provides simulated power calculations.</p></li>
 <li><p><pkg>BayesESS</pkg> provided simulated power calculations for Bayesian models</p></li>
 </ul></li>
@@ -184,7 +184,7 @@
 </ul></li>
 <li><p><strong>Mediation Analysis (see also Structural Equation Modeling)</strong></p>
 <ul>
-<li><pkg>WebPower</pkg> both support power analysis of mediation. WebPower additionally supports statistical power analysis for structural equation modeling / mediation based on Monte Carlo simulation.</li>
+<li><pkg>pwr2ppl</pkg> and <a href="https://CRAN.R-Project.org/package=WebPower">WebPower</a> both support power analysis of mediation. WebPower additionally supports statistical power analysis for structural equation modeling / mediation based on Monte Carlo simulation.</li>
 </ul></li>
 <li><p><strong>Meta-Analysis</strong></p>
 <ul>
@@ -205,12 +205,12 @@
 <ul>
 <li><p><pkg>pwr2ppl</pkg> and <a href="https://CRAN.R-Project.org/package=pass.lme">pass.lme</a> provide power and sample size calculation for the fixed effect term</p></li>
 <li><p><pkg>pamm</pkg> assesses the power of a dataset to estimate significant random effects (intercept or slope) in a mixed model. The functions are based on the <code>lme4</code> and <code>lmerTest</code> packages.</p></li>
-<li><p>Simulations of lmms and glmms can be performed with <pkg>simglm</pkg>.</p></li>
+<li><p>Simulations of lmms and glmms can be performed with <pkg>simr</pkg> and <a href="https://CRAN.R-Project.org/package=simglm">simglm</a>.</p></li>
 </ul></li>
 <li><p><strong>Multiple Comparisons</strong></p>
 <ul>
 <li><p><pkg>rPowerSampleSize</pkg> computes sample size for single-step (Bonferroni) and step-wise procedures (Holm and Hochberg) to control the Type-II Generalized Family-Wise Error Rate.</p></li>
-<li><p><pkg>pwrFDR</pkg> provide functions to compute power and sample sizes for studies using false discovery rate as the final measure of statistical significance.</p></li>
+<li><p><pkg>FDRsampsize</pkg> and <a href="https://CRAN.R-Project.org/package=pwrFDR">pwrFDR</a> provide functions to compute power and sample sizes for studies using false discovery rate as the final measure of statistical significance.</p></li>
 </ul></li>
 <li><p><strong>Multivariable Prediction Model</strong></p>
 <ul>
@@ -218,7 +218,7 @@
 </ul></li>
 <li><p><strong>Pearson Correlation</strong></p>
 <ul>
-<li><pkg>pwr2ppl</pkg> all contain methods for power analysis of correlations.</li>
+<li><pkg>WebPower</pkg>, <a href="https://CRAN.R-Project.org/package=pwr">pwr</a>, and <a href="https://CRAN.R-Project.org/package=pwr2ppl">pwr2ppl</a> all contain methods for power analysis of correlations.</li>
 </ul></li>
 <li><p><strong>Pharmacokinetic Study Design:</strong></p>
 <ul>
@@ -238,7 +238,7 @@
 <li><p><strong>Proportion Test</strong></p>
 <ul>
 <li><p><pkg>BAEssd</pkg> employs a Bayesian average error based approach to sample size determination. Several functions are included for sample size calculation for common designs in clinical trials including one- and two-sample binary and normal responses.</p></li>
-<li><p><pkg>WebPower</pkg> support both.</p></li>
+<li><p><pkg>MKpower</pkg> contains methods for one-sample proportion tests while <a href="https://CRAN.R-Project.org/package=PASSED">PASSED</a> contains methods for two, while <a href="https://CRAN.R-Project.org/package=powerAnalysis">powerAnalysis</a>, <a href="https://CRAN.R-Project.org/package=pwr">pwr</a>, <a href="https://CRAN.R-Project.org/package=pwr2ppl">pwr2ppl</a>, and <a href="https://CRAN.R-Project.org/package=WebPower">WebPower</a> support both.</p></li>
 <li><p><pkg>binomSamSize</pkg> computes confidence intervals and necessary sample sizes for the parameter <em>p</em> of the Bernoulli B(p) distribution under simple random sampling or under pooled sampling. Such computations are e.g. of interest when investigating the incidence or prevalence in populations.</p></li>
 </ul></li>
 <li><p><strong>Quantitative Comparative Analysis</strong></p>
@@ -255,7 +255,7 @@
 <li><p><pkg>SampleSize4ClinicalTrials</pkg> calculates sample size when comparing means or proportions in Phase III clinical trials with different research goals.</p></li>
 <li><p><pkg>smartsizer</pkg> is a set of tools for determining the necessary sample size in order to identify the optimal dynamic treatment regime in a sequential, multiple assignment, randomized trial (SMART).</p></li>
 <li><p><pkg>ssev</pkg> computes the optimal sample size for various 2-group designs (e.g., when comparing the means of two groups assuming equal variances, unequal variances, or comparing proportions) when the aim is to maximize the rewards over the full decision procedure of a) running a trial (with the computed sample size), and b) subsequently administering the winning treatment to the remaining N-n units in the population.</p></li>
-<li><p><pkg>WebPower</pkg> also supports multisite RCTs.</p></li>
+<li><p><pkg>odr</pkg> performs power analyses with and without accommodating cost structures of sampling for experimental studies under a budget constraint for multisite RCTs. <a href="https://CRAN.R-Project.org/package=WebPower">WebPower</a> also supports multisite RCTs.</p></li>
 </ul></li>
 <li><p><strong>Cluster Randomized Trials:</strong></p>
 <ul>
@@ -268,7 +268,7 @@
 <li><p><pkg>WebPower</pkg> also provides support for cluster randomized designs.</p></li>
 <li><p><strong>Adaptive Study Design</strong></p>
 <ul>
-<li><p><pkg>esDesign</pkg> provide sample size calculation where eligibility criteria of the trial is adaptively updated.</p></li>
+<li><p><pkg>spass</pkg> and <a href="https://CRAN.R-Project.org/package=esDesign">esDesign</a> provide sample size calculation where eligibility criteria of the trial is adaptively updated.</p></li>
 <li><p><pkg>rpact</pkg> can be used for adaptive clinical trial design as well as many general functions for use outside an RCT context.</p></li>
 </ul></li>
 <li><p><strong>Equivalence trial</strong></p>
@@ -298,15 +298,15 @@
 </ul></li>
 <li><p><strong>Regression (also see Mixed Models and Poisson Distribution)</strong></p>
 <ul>
-<li><p><pkg>WebPower</pkg> all have general methods for various forms of regression. <code>pwr2ppl::pwr.f2.test</code> provides power for comparing dependent coefficients in multiple regression with two or three predictors.</p></li>
-<li><p><pkg>simglm</pkg> both support simulation of regression models with various structures.</p></li>
+<li><p><pkg>pwr2ppl</pkg>, <a href="https://CRAN.R-Project.org/package=pwr">pwr</a>, and <a href="https://CRAN.R-Project.org/package=WebPower">WebPower</a> all have general methods for various forms of regression. <code>pwr2ppl::pwr.f2.test</code> provides power for comparing dependent coefficients in multiple regression with two or three predictors.</p></li>
+<li><p><pkg>simr</pkg> and <a href="https://CRAN.R-Project.org/package=simglm">simglm</a> both support simulation of regression models with various structures.</p></li>
 <li><p><pkg>Hmisc</pkg> simulates power of a Bayesian odds ordinal logistic model.</p></li>
-<li><p><pkg>MKpower</pkg> for comparing two negative binomial rates</p></li>
+<li><p><pkg>PASSED</pkg> and <a href="https://CRAN.R-Project.org/package=MKpower">MKpower</a> for comparing two negative binomial rates</p></li>
 <li><p><pkg>RSPS</pkg> provides an empirical approach for RNA-seq data</p></li>
 </ul></li>
 <li><p><strong>Regression Discontinuity (RD) Design</strong></p>
 <ul>
-<li>Both <pkg>rddapp</pkg> provide tools to perform power, sample size and MDE calculations in RD designs.</li>
+<li>Both <pkg>rdpower</pkg> and <a href="https://github.com/felixthoemmes/rddapp">rddapp</a> provide tools to perform power, sample size and MDE calculations in RD designs.</li>
 </ul></li>
 <li><p><strong>Repertory Grid Studies</strong></p>
 <ul>
@@ -344,11 +344,11 @@
 </ul></li>
 <li><p><strong>T-Test</strong></p>
 <ul>
-<li><p>Many packages can calculate power for basic one- and two-sample t-tests: <pkg>pwrAB</pkg>.</p></li>
+<li><p>Many packages can calculate power for basic one- and two-sample t-tests: <pkg>FDRsampsize</pkg>, <a href="https://CRAN.R-Project.org/package=WebPower">WebPower</a>, <a href="https://CRAN.R-Project.org/package=pwr">pwr</a>, <a href="https://CRAN.R-Project.org/package=PASSED">PASSED</a>, <a href="https://CRAN.R-Project.org/package=powerAnalysis">powerAnalysis</a>, <a href="https://CRAN.R-Project.org/package=samplesize">samplesize</a>, <a href="https://CRAN.R-Project.org/package=pwr2ppl">pwr2ppl</a>, <a href="https://CRAN.R-Project.org/package=pwrAB">pwrAB</a>.</p></li>
 <li><p><pkg>PowerTOST</pkg> calculates power for the two-one-sided t-test</p></li>
 <li><p>Simulate power through <pkg>MKpower</pkg> for classical (equal variances), Welch and Hsu T-tests.</p></li>
 <li><p><pkg>ssizeRNA</pkg> computes appropriate sample sizes for two-sample t-test for RNA-seq experiments with fixed or varied set of parameters.</p></li>
-<li><p><pkg>MKmisc</pkg> can also be used for Welch <em>t</em>-tests as well as comparing negative binomial rates.</p></li>
+<li><p><pkg>MKpower</pkg> computes power for Welch and Hsu <em>t-</em>tests for balanced designs; <a href="https://CRAN.R-Project.org/package=MKpower">MKmisc</a> can also be used for Welch <em>t</em>-tests as well as comparing negative binomial rates.</p></li>
 </ul></li>
 <li><p><strong>TDT Study (transmission disequilibrium test)</strong></p>
 <ul>
@@ -378,9 +378,9 @@
 <h4>General simulation packages useful for power analysis</h4>
 <p>In some cases, there are either no analytical solutions (a knowledge gap) or no programmed function of an analytical solution (an implementation gap) in R. Empirical power (i.e., a simulation study of power) can be used in either of these cases, or when the assumptions of the analytical solution are not met. General packages helpful for simulation are shown below; method-specific simulation packages are integrated into the <strong><u>Specific models/methods/tests</u></strong> section above.</p>
 <ul>
-<li><p><pkg>DeclareDesign</pkg> provides a general framework for specifying research designs, simulated based on specified designs, and assessing various properties of the designs, including but not limitde to power.</p></li>
+<li><p><pkg>DeclareDesign</pkg> provides a general framework for specifying research designs, simulated based on specified designs, and assessing various properties of the designs, including but not limited to power.</p></li>
 <li><p><a href="https://github.com/statisfactions/simpr">simpr</a> is a GitHub R package that has a framework to data simulation—based on tidyverse / broom syntax—and can perform power calculations</p></li>
-<li><p>Various general-purpose MonteCarlo simulation packages exist, including <pkg>simstudy</pkg>.</p></li>
+<li><p>Various general-purpose MonteCarlo simulation packages exist, including <pkg>MonteCarlo</pkg> and <a href="https://CRAN.R-Project.org/package=simstudy">simstudy</a>.</p></li>
 </ul>
 </info>
 <packagelist>

@@ -777,7 +777,7 @@ of the analytical solution are not met. General packages helpful for
 simulation are shown below; method-specific simulation packages are integrated into
 the **<u>Specific models/methods/tests</u>** section above.
 
--   [DeclareDesign](https://CRAN.R-Project.org/package=DeclareDesign) provides a general framework for specifying research designs, simulated based on specified designs, and assessing various properties of the designs, including but not limitde to power.
+-   [DeclareDesign](https://CRAN.R-Project.org/package=DeclareDesign) provides a general framework for specifying research designs, simulated based on specified designs, and assessing various properties of the designs, including but not limited to power.
 
 -   [simpr](https://github.com/statisfactions/simpr) is a GitHub R package that has a framework to data simulation—based on tidyverse / broom syntax—and can perform power calculations
 

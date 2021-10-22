@@ -69,12 +69,13 @@ md2ctv <- function(file = "ctv-power.md", links_file = "ctv-power-links.md", sav
     ## replace headers...
     # ll = sub("<h4>((\\w+ ?)*).*</h4>$", replacement = "<p><strong>\\1</strong></p>", ll)
     ## ... and package hyperlinks
-    ll = sub("<a href=\"https://CRAN.+>(\\w+)</a>", replacement = "<pkg>\\1</pkg>", ll)
+    ll = sub("<a href=\"https://CRAN.+?>(\\w+?)</a>", replacement = "<pkg>\\1</pkg>", ll)
+    ll
   }
   
   info = md2htmlclean(file)
   links = md2htmlclean(links_file)
-  pkgs = extract_pkgs(file)
+  pkgs = extract_cran(file)
   
   pkgcounts = as.matrix(table(pkgs))[,1]
   uniq_pkgs = sort(unique(pkgs))
