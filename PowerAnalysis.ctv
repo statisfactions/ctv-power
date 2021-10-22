@@ -1,0 +1,515 @@
+<CRANTaskView>
+<name>PowerAnalysis</name>  
+<topic>Power analysis and sample size calculation</topic>  
+<maintainer email="rwebster@cheo.on.ca">Richard Webster</maintainer>  
+<maintainer email="ecbrown@umn.edu">Ethan C. Brown</maintainer>  
+<version>2021-10-20</version>  
+
+<info>
+<p>Power calculations and sample size estimation are an important step in study design. It is costly to collect data, and either too little or too much data collection may result in either unreliable findings or precise estimates of the true effect at a higher than necessary cost. By making educated assumptions at the study design phase, statistical power and related design considerations can:</p>
+<ul>
+<li><p>Inform study feasibility</p></li>
+<li><p>Determine the point of diminishing returns for sampling, and</p></li>
+<li><p>Allow decision makers to better allocate their limited resources.</p></li>
+</ul>
+<p>There are many statistical tests and study designs, so subsequently there is a vast array of statistical power calculations. Power calculations may be I) an analytic formula approach, II) a simulation approach, or III) a combination of the two. While the analytic formula approach has a theoretical foundation, often for complex models there are no analytical solutions available. This page covers both analytical and simulation-based methods for power analysis, as well as several more general simulation packages that are useful for power analysis.</p>
+<p>This Task View page hopes to make it easier to find sample size functionality in R. <em><u>Please let us know</u></em> if we have omitted something of importance, for instance a new package that should be mentioned here by submitting an issue or pull request on our <a href="https://github.com/statisfactions/ctv-power">Github page</a>.</p>
+<h4>Specific models/methods/tests (ordered alphabetically)</h4>
+<p>This list of packages for power calculations / sample size estimation is ordered alphabetically by statistical test.</p>
+<ul>
+<li><p><strong>Adaptive Study Design</strong></p>
+<ul>
+<li><pkg>esDesign</pkg></li>
+</ul></li>
+<li><p><strong>Algorithm Optimization</strong></p>
+<ul>
+<li><pkg>CAISEr</pkg> determines the sample size required for comparing the performance of a set of <em>k</em> algorithms on a given problem instance when power inaccuracy is predefined</li>
+</ul></li>
+<li><p><strong>ANCOVA</strong></p>
+<ul>
+<li><pkg>pwr2ppl</pkg> computes power for one or two factor ANCOVA with a single covariate</li>
+</ul></li>
+<li><p><strong>ANOVA:</strong></p>
+<ul>
+<li><p>General options include <pkg>pwr</pkg> package, simplifies the user input for factorial ANOVA.</p></li>
+<li><p><pkg>BUCSS</pkg> allows any number of factors, using uncertainty and publication bias correction.</p></li>
+<li><p><pkg>powerbydesign</pkg> provides functions for bootstrapping the power of ANOVA designs based on estimated means and standard deviations of the conditions</p></li>
+<li><p><pkg>powerAnalysis</pkg> only should be used with balanced one-way analysis of variance tests.</p></li>
+<li><p><pkg>powerMediation</pkg> performs power calculation for interaction effect in 2x2 two-way ANOVA.</p></li>
+<li><p><pkg>Superpower</pkg> uses simulations and analytic power solutions for ANOVA designs of up to three factors to calculate power and average observed effect sizes.</p></li>
+</ul></li>
+<li><p><strong>Bayesian:</strong></p>
+<ul>
+<li><p><pkg>bayescount</pkg> provides analysis and power calculations for count data.</p></li>
+<li><p><pkg>BayesESS</pkg> determines effective sample size of a parametric prior distribution in Bayesian conjugate models (beta-binomial, gamma-exponential, gamma-Poisson, dirichlet-multinomial, normal-normal, inverse chi-squared-normal, inverse-gamma-normal), Bayesian linear and logistic regression models, Bayesian continual reassessment method (CRM), and Bayesian time to event model.</p></li>
+<li><p><pkg>BayesianPower</pkg> determine the required sample size for the evaluation of inequality constrained hypotheses by means of a Bayes factor</p></li>
+<li><p><pkg>SampleSizeProportions</pkg> for estimating proportions, using three different Bayesian criteria in the context of designing an experiment. Functions for calculation of required sample sizes for the Average Length Criterion, the Average Coverage Criterion and the Worst Outcome Criterion. Functions for both the fully Bayesian and the mixed Bayesian/likelihood approaches are provided.</p></li>
+</ul></li>
+<li><p><strong>Beta Distribution:</strong></p>
+<ul>
+<li><pkg>BetaPASS</pkg> helps find the power for a given sample size or the sample size given power, when the outcome/response/dependent variable is a proportion or constrained between 0-1, with a beta distribution. <strong>BetaPASS</strong> has functions to plot power curves demonstrated in its vignette.</li>
+</ul></li>
+<li><p><strong>Bioequivalence Study</strong></p>
+<ul>
+<li><p><pkg>Power2Stage</pkg> contains functions to obtain the operational characteristics of bioequivalence studies in Two-Stage Designs (TSD) via simulations.</p></li>
+<li><p><pkg>PowerTOST</pkg> calculates power and sample size for various study designs used in bioequivalence studies.</p></li>
+</ul></li>
+<li><p><strong>Case-Control study:</strong></p>
+<ul>
+<li><p><pkg>CoRpower</pkg> calculates power for assessment of intermediate biomarker responses as correlates of risk in the active treatment group in clinical efficacy trials. The methods differ from past approaches by accounting for the level of clinical treatment efficacy overall and in biomarker response subgroups, which enables the correlates of risk results to be interpreted in terms of potential correlates of efficacy/protection.</p></li>
+<li><p><pkg>epiR</pkg> calculates sample size, power, and detectable odds ratios.</p></li>
+<li><p><pkg>samplesizelogisticcasecontrol</pkg> determines sample size for case-control studies to be analyzed using logistic regression.</p></li>
+</ul></li>
+<li><p><strong>Chi-squared test:</strong></p>
+<ul>
+<li>Options include <pkg>ssd</pkg>.</li>
+</ul></li>
+<li><p><strong>Cochran-Mantel-Haenszel Test:</strong></p>
+<ul>
+<li><pkg>samplesizeCMH</pkg> calculates the power and sample size for Cochran-Mantel-Haenszel tests, with several helper functions for working with probability, odds, relative risk, and odds ratio values.</li>
+</ul></li>
+<li><p><strong>Competing Risks Analysis:</strong></p>
+<ul>
+<li><pkg>powerCompRisk</pkg> is power analysis tool for jointly testing the cause-1 cause-specific hazard and the any-cause hazard with competing risks data.</li>
+</ul></li>
+<li><p><strong>Complex Surveys</strong></p>
+<ul>
+<li><pkg>samplesize4surveys</pkg> computes the required sample size for estimation of totals, means, and proportions under complex sampling designs.</li>
+</ul></li>
+<li><p><strong>Cost-Effectiveness Studies</strong></p>
+<ul>
+<li><pkg>EBASS</pkg> calculates the estimated sample size based on the Expected Value of Perfect Information (EVPI).</li>
+</ul></li>
+<li><p><strong>Cross-sectional study</strong></p>
+<ul>
+<li><pkg>epiR</pkg> provides functionality for sample size, power, or detectable prevalence.</li>
+</ul></li>
+<li><p><strong>Diagnostic Test</strong></p>
+<ul>
+<li><pkg>MKpower</pkg> computes sample size, power, delta, or significance level of a diagnostic test for an expected sensitivity or specificity.</li>
+</ul></li>
+<li><p><strong>Dirichlet-Multinomial distribution:</strong></p>
+<ul>
+<li><pkg>HMP</pkg> uses the Dirichlet-Multinomial distribution to provide several functions for formal hypothesis testing, power and sample size calculations.</li>
+</ul></li>
+<li><p><strong>Factorial Design</strong></p>
+<ul>
+<li><p><pkg>BDEsize</pkg> calculates the sample size required to detect a certain standardized effect size, under a significance level (two-level fractional factorial, randomized complete block design, full factorial design, and split-plot design). This package also provides three graphs; detectable standardized effect size vs power, sample size vs detectable standardized effect size, and sample size vs power, which show the mutual relationship between the sample size, power and the detectable standardized effect size.</p></li>
+<li><p><pkg>H2x2Factorial</pkg> estimates the required number of clusters or the achieved power level under different types of hypothesis tests in a hierarchical 2x2 factorial trial with unequal cluster sizes and a continuous outcome.</p></li>
+</ul></li>
+<li><p><strong>Fisher’s Test</strong></p>
+<ul>
+<li><p>Power calculations for differences between binomial proportions can be achieved with <pkg>MIDN</pkg> computes the exact sample sizes required based on the Boschloo’s technique and Fisher-Boschloo test mid-N estimates.</p></li>
+<li><p><pkg>ssanv</pkg> provides a calibrated power calculation by leveraging the uncertainty in either nonadherence or parameter estimation.</p></li>
+</ul></li>
+<li><p><strong>Gamma Distribution</strong></p>
+<ul>
+<li><pkg>PASSED</pkg> determines the power for a test of two sample means with Gamma distributions, or determine parameters to obtain a target power.</li>
+</ul></li>
+<li><ul>
+<li></li>
+</ul></li>
+<li><p><strong>Genetic Association Studies:</strong></p>
+<ul>
+<li><p><pkg>genpwr</pkg> is for genetic association studies, considering the impact of misspecification of the genetic model.</p></li>
+<li><p><pkg>pbatR</pkg> provides pedigree/family-based genetic association tests analysis and power.</p></li>
+<li><p><pkg>powerGWASinteraction</pkg> provides analytical power calculations for GxE and GxG interactions for case-control studies of candidate genes and genome-wide association studies (GWAS). This includes power calculation for four two-step screening and testing procedures. It can also calculate power for GxE and GxG without any screening.</p></li>
+<li><p><pkg>survSNP</pkg> conducts asymptotic and empirical power and sample size calculations for Single-Nucleotide Polymorphism (SNP) association studies with right censored time to event outcomes.</p></li>
+</ul></li>
+<li><p><strong>Goodness of Fit Test</strong></p>
+<ul>
+<li><p><pkg>pwr</pkg> supports calculation of power for goodness of fit tests.</p></li>
+<li><p><pkg>PoweR</pkg> provides functions for the computation of power and level tables for hypothesis tests, in Latex format, functions to build explanatory graphs for studying power of test statistics.</p></li>
+</ul></li>
+<li><p><strong>Group Sequential Design</strong></p>
+<ul>
+<li><pkg>PwrGSD</pkg> provides tools for the evaluation of interim analysis plans for sequentially monitored trials on a survival endpoint; deriving power of a sequential design at a specified alternative.</li>
+</ul></li>
+<li><p><strong>Hierarchical Data</strong></p>
+<ul>
+<li><pkg>HierO</pkg> calculates statistical power for given type I error (alpha), effect size (Delta) and non-centrality parameter (ncpar) of a non-central chi-square distribution.</li>
+</ul></li>
+<li><p><strong>High Dimensional Classification Study</strong></p>
+<ul>
+<li><pkg>HDDesign</pkg> determines the sample size requirement to achieve the target probability of correct classification (PCC) for studies employing high-dimensional features.</li>
+</ul></li>
+<li><p><strong>Human Microbiome Experiment</strong></p>
+<ul>
+<li><pkg>HMP</pkg> uses the Dirichlet-Multinomial distribution to provide several functions for formal hypothesis testing, power and sample size calculations for human microbiome experiments.</li>
+</ul></li>
+<li><p><strong>Intraclass Correlation</strong></p>
+<ul>
+<li><a href="https://CRAN.R-Project.org/package=ICC.Sample.Size">ICC.Sample.Size</a> calculates power for given value of p, the null hypothesis p0, number of raters (k), number of comparisons (N) and alpha. Can also be used to calculate the effect of increasing N at given intervals to a maximum N, or to calculate the increase in sample size to obtain increasing power with a given maximum N.</li>
+</ul></li>
+<li><p><strong>Interobserver Agreement Studies</strong></p>
+<ul>
+<li><pkg>kappaSize</pkg> providesbasic tools for sample size estimation in studies of interob-server/interrater agreement (reliability). Includes functions for both the power-based and confidence interval-based methods, with binary or multinomial outcomes and two through six raters.</li>
+</ul></li>
+<li><p><strong>Likelihood Ratio test</strong></p>
+<ul>
+<li><pkg>asypow</pkg> calculates power utilizing asymptotic likelihood ratio methods</li>
+</ul></li>
+<li><p><strong>Linear Regression</strong></p>
+<ul>
+<li><p><pkg>WebPower</pkg> provide analytical power calculations.</p></li>
+<li><p><pkg>simpr</pkg> provided simulated power calculations.</p></li>
+<li><p><pkg>BayesESS</pkg> provided simulated power calculations for Bayesian models</p></li>
+</ul></li>
+<li><p><strong>Local Average Treatment Effect (LATE)</strong></p>
+<ul>
+<li><pkg>powerLATE</pkg> is an implementation of the generalized power analysis for the local average treatment effect (LATE). The method uses standardized effect sizes to place a conservative bound on the power under minimal assumptions. Package allows users to recover power, sample size requirements, or minimum detectable effect sizes. Package also allows users to work with absolute effects rather than effect sizes, to specify an additional assumption to narrow the bounds, and to incorporate covariate adjustment.</li>
+</ul></li>
+<li><p><strong>Logistic Regression</strong></p>
+<ul>
+<li><p><pkg>WebPower</pkg> calculates power for simple logistic regression with binary/continuous predictors</p></li>
+<li><p><pkg>simr</pkg> provides simulated power calculations.</p></li>
+<li><p><pkg>BayesESS</pkg> provided simulated power calculations for Bayesian models</p></li>
+</ul></li>
+<li><p><strong>Longitudinal Data Analysis</strong></p>
+<ul>
+<li><p><pkg>LPower</pkg> computes power, or sample size or the detectable difference for a repeated measures model with attrition. It requires the variance covariance matrix of the observations but can compute this matrix for several common random effects models.</p></li>
+<li><p><pkg>longpower</pkg> computes power and sample size for linear models of longitudinal data. Supported models include mixed-effects models and models fit by generalized least squares and generalized estimating equations.</p></li>
+<li><p><a href="https://github.com/rpsychologist/powerlmm">powerlmm</a> calculates power for the ‘time x treatment’ effect in two- and three-level multilevel longitudinal studies with missing data. Studies with partially nested designs, unequal cluster sizes, unequal allocation to treatment arms, and different dropout patterns per treatment are supported. For all designs power can be calculated both analytically and via simulations.</p></li>
+<li><p><pkg>powerMediation</pkg> calculates power for testing if mean changes for 2 groups are the same or not for longitudinal study with 2 or more time points.</p></li>
+<li><p><a href="https://CRAN.R-Project.org/package=ssrm.logmer">ssrm.logmer</a> estimates required sample size for a longitudinal study with binary outcome in order to attain a pre-specified power while strictly maintaining the Type I error rate.</p></li>
+<li><p><pkg>WebPower</pkg> also supports estimation of power for longitudinal models.</p></li>
+</ul></li>
+<li><p><strong>MANOVA</strong></p>
+<ul>
+<li><pkg>pwr2ppl</pkg> supports power for one factor MANOVA with up to 2 levels and 4 measures.</li>
+</ul></li>
+<li><p><strong>Mcnemar Test</strong></p>
+<ul>
+<li><pkg>MIDN</pkg> computes the exact sample sizes required in the randomized UMPU test and its conservative nonrandomized counterpart for attaining prespecified power. However, in contrast to the parallel group setting, the midpoint of the interval between these two numbers shall now be used as a nearly exact value of the number of pairs to be observed in the asymptotic test based on the score-statistic corrected for possible exceedances of the nominal significance level.</li>
+</ul></li>
+<li><p><strong>Mediation Analysis (see also Structural Equation Modeling)</strong></p>
+<ul>
+<li><pkg>WebPower</pkg> both support power analysis of mediation. WebPower additionally supports statistical power analysis for structural equation modeling / mediation based on Monte Carlo simulation.</li>
+</ul></li>
+<li><p><strong>Meta-Analysis</strong></p>
+<ul>
+<li><p><pkg>metapower</pkg> calculates power for meta-analysis, including power analysis of main effects.</p></li>
+<li><p><a href="https://github.com/dsquintana/metameta">metameta</a> is a Github package for re-analyzing published meta-analysis, including calculating power for each study in a meta-analysis.</p></li>
+</ul></li>
+<li><p><strong>Microarray Study</strong></p>
+<ul>
+<li><p><pkg>FDRsampsize</pkg> computes average power and sample size for microarray studies that use the false discovery rate as the final measure of statistical significance.</p></li>
+<li><p><a href="https://CRAN.R-Project.org/package=ssize.fdr">ssize.fdr</a> contains a set of functions that calculates appropriate sample sizes for one-sample t-tests, two-sample t-tests, and F-tests for microarray experiments based on desired power while controlling for false discovery rates.</p></li>
+</ul></li>
+<li><p><strong>Micro-randomized trials</strong></p>
+<ul>
+<li><p><pkg>MRTSampleSize</pkg>.</p></li>
+<li><p><pkg>MRTSampleSizeBinary</pkg> is a sample size calculator for micro-randomized trials (MRTs) with binary outcomes.</p></li>
+</ul></li>
+<li><p><strong>Mixed Models</strong></p>
+<ul>
+<li><p><pkg>pwr2ppl</pkg> and <a href="https://CRAN.R-Project.org/package=pass.lme">pass.lme</a> provide power and sample size calculation for the fixed effect term</p></li>
+<li><p><pkg>pamm</pkg> assesses the power of a dataset to estimate significant random effects (intercept or slope) in a mixed model. The functions are based on the <code>lme4</code> and <code>lmerTest</code> packages.</p></li>
+<li><p>Simulations of lmms and glmms can be performed with <pkg>simglm</pkg>.</p></li>
+</ul></li>
+<li><p><strong>Multiple Comparisons</strong></p>
+<ul>
+<li><p><pkg>rPowerSampleSize</pkg> computes sample size for single-step (Bonferroni) and step-wise procedures (Holm and Hochberg) to control the Type-II Generalized Family-Wise Error Rate.</p></li>
+<li><p><pkg>pwrFDR</pkg> provide functions to compute power and sample sizes for studies using false discovery rate as the final measure of statistical significance.</p></li>
+</ul></li>
+<li><p><strong>Multivariable Prediction Model</strong></p>
+<ul>
+<li><pkg>pmsampsize</pkg> computes the minimum sample size required for the development of a new multivariable prediction model. This can be used to calculate the minimum sample size for the development of models with continuous, binary or survival (time-to-event) outcomes.</li>
+</ul></li>
+<li><p><strong>Pearson Correlation</strong></p>
+<ul>
+<li><pkg>pwr2ppl</pkg> all contain methods for power analysis of correlations.</li>
+</ul></li>
+<li><p><strong>Pharmacokinetic Study Design:</strong></p>
+<ul>
+<li><pkg>PharmPow</pkg> analyzes mixed (sparse/dense sampled) pharmacokinetic study designs.</li>
+</ul></li>
+<li><p><strong>Poisson Distributions and Poisson Regression</strong></p>
+<ul>
+<li><p><pkg>PASSED</pkg> computes the power for a test of two sample means with Poisson distributions, or determine parameters to obtain a target power.</p></li>
+<li><p><pkg>powerMediation</pkg> calculates power for simple Poisson regression &amp; mediation effect in poisson regression based on Vittinghoff, Sen and McCulloch’s (2009) method.</p></li>
+<li><p><pkg>RSPS</pkg> provides functions for estimating power or sample size for RNA-Seq studies. Empirical approach is used and the data is assumed to be count in nature.</p></li>
+<li><p><pkg>WebPower</pkg> contains methods for estimating power for Poisson regression.</p></li>
+</ul></li>
+<li><p><strong>Portfolio Efficiency</strong></p>
+<ul>
+<li><a href="https://CRAN.R-Project.org/package=GRS.test">GRS.test</a> implements power analysis for the GRS test for portfolio efficiency.</li>
+</ul></li>
+<li><p><strong>Proportion Test</strong></p>
+<ul>
+<li><p><pkg>BAEssd</pkg> employs a Bayesian average error based approach to sample size determination. Several functions are included for sample size calculation for common designs in clinical trials including one- and two-sample binary and normal responses.</p></li>
+<li><p><pkg>WebPower</pkg> support both.</p></li>
+<li><p><pkg>binomSamSize</pkg> computes confidence intervals and necessary sample sizes for the parameter <em>p</em> of the Bernoulli B(p) distribution under simple random sampling or under pooled sampling. Such computations are e.g. of interest when investigating the incidence or prevalence in populations.</p></li>
+</ul></li>
+<li><p><strong>Quantitative Comparative Analysis</strong></p>
+<ul>
+<li><pkg>qcapower</pkg> estimates power of a sufficient term using permutation tests. A term can be anything: A condition, conjunction or disjunction of any combination of these.</li>
+</ul></li>
+<li><p><strong>Randomized Controlled Trials</strong></p>
+<ul>
+<li><p><pkg>CP</pkg> is for calculating the condition power for different models in survival time analysis within RCTs with two different treatments to be compared and survival as an endpoint.</p></li>
+<li><p><pkg>odr</pkg> performs power analyses with and without accommodating cost structures of sampling for experimental studies under a budget constraint.</p></li>
+<li><p><pkg>powerCompRisk</pkg> provides 2-group comparisons cause-specific hazard and the all-cause hazard sample size calculations using an asymptotic chi-square joint test, accounting for censoring (e.g., lost to follow-up, staggered entry and administrative censoring).</p></li>
+<li><p><pkg>RCT</pkg> computes the minimum population needed to detect difference between control group and each treatment, given a target minimum detectable effect.</p></li>
+<li><p><a href="https://CRAN.R-Project.org/package=Sample.Size">Sample.Size</a> computes the required sample size using optimal designs with multiple constraints. This optimal method is designed for two-arm, randomized phase II clinical trials, and the required sample size can be optimized either using fixed or flexible randomization allocation ratios.</p></li>
+<li><p><pkg>SampleSize4ClinicalTrials</pkg> calculates sample size when comparing means or proportions in Phase III clinical trials with different research goals.</p></li>
+<li><p><pkg>smartsizer</pkg> is a set of tools for determining the necessary sample size in order to identify the optimal dynamic treatment regime in a sequential, multiple assignment, randomized trial (SMART).</p></li>
+<li><p><pkg>ssev</pkg> computes the optimal sample size for various 2-group designs (e.g., when comparing the means of two groups assuming equal variances, unequal variances, or comparing proportions) when the aim is to maximize the rewards over the full decision procedure of a) running a trial (with the computed sample size), and b) subsequently administering the winning treatment to the remaining N-n units in the population.</p></li>
+<li><p><pkg>WebPower</pkg> also supports multisite RCTs.</p></li>
+</ul></li>
+<li><p><strong>Cluster Randomized Trials:</strong></p>
+<ul>
+<li><p><pkg>clusterPower</pkg> provides calculations for wide array of cluster design trials (1) Simple two-arm comparison designs, (2) Difference in difference designs, (3) Individually randomized group treatment trials, (4) Stepped wedge designs, (5) Multiarm trial designs.</p></li>
+<li><p><pkg>CRTSize</pkg> supports sample size estimation in cluster (group) randomized trials.</p></li>
+<li><p><pkg>odr</pkg> performs power analyses with and without accommodating cost structures of sampling for experimental studies under a budget constraint.</p></li>
+<li><p><pkg>PowerUpR</pkg> calculates statistical power, minimum detectable effect size (MDES), MDES dif-ference (MDESD), and minimum required sample size for various multilevel randomized experi-ments with continuous outcomes. Some of the functions can assist with planning two- and three-level cluster-randomized trials (CRTs) sensitive to multilevel moderation and mediation (2-1-1, 2-2-1, and 3-2-1).</p></li>
+<li><p><pkg>SteppedPower</pkg> provides tools for power and sample size calculation as well as design diagnostics for longitudinal mixed model settings, with a focus on stepped wedge designs.</p></li>
+<li><p><pkg>swdpwr</pkg> proivdes statistical power calculation for stepped wedge cluster randomized trials.</p></li>
+<li><p><pkg>WebPower</pkg> also provides support for cluster randomized designs.</p></li>
+<li><p><strong>Adaptive Study Design</strong></p>
+<ul>
+<li><p><pkg>esDesign</pkg> provide sample size calculation where eligibility criteria of the trial is adaptively updated.</p></li>
+<li><p><pkg>rpact</pkg> can be used for adaptive clinical trial design as well as many general functions for use outside an RCT context.</p></li>
+</ul></li>
+<li><p><strong>Equivalence trial</strong></p>
+<ul>
+<li><pkg>epiR</pkg> calculates sample size for parallel equivalence trial with binary or continuous outcomes.</li>
+</ul></li>
+<li><p><strong>Non-Inferiority Trial</strong></p>
+<ul>
+<li><p><pkg>epiR</pkg> supports non-inferiority trials with both binary or continuous outcomes.</p></li>
+<li><p><pkg>blindrecalc</pkg> computes key characteristics and plots for blinded sample size recalculation, including power. Continuous and binary endpoints are supported.</p></li>
+</ul></li>
+<li><p><strong>Sequential Multiple Assignment Randomized Trial (SMART)</strong></p>
+<ul>
+<li><p><pkg>SMARTbayesR</pkg> supports optimal dynamic treatment regimes and sample size for a SMART design in the Bayesian setting.</p></li>
+<li><p><pkg>SMARTp</pkg> provides sample size calculation to detect dynamic treatment regime (DTR) effects based on change in clinical attachment level (CAL) outcomes from a non-surgical chronic periodontitis treatments study. The clustered tooth (sub-unit) level CAL outcomes are skewed, spatially-referenced, and non-randomly missing.</p></li>
+</ul></li>
+<li><p><strong>Superiority Trial</strong></p>
+<ul>
+<li><p><pkg>blindrecalc</pkg> computes key characteristics and plots for blinded sample size recalculation, including power. Continuous and binary endpoints are supported.</p></li>
+<li><p><pkg>epiR</pkg> calculates sample size for parallel superiority trial with binary or continuous outcome)</p></li>
+<li><p><pkg>MIDN</pkg> provides nearly exact sample size calculation for exact powerful nonrandomized tests for differences between binomial proportions.</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Rasch Model</strong></p>
+<ul>
+<li><pkg>pwrRasch</pkg> provides statistical power simulation for testing the Rasch Model based on a three-way analysis of variance design with mixed classification.</li>
+</ul></li>
+<li><p><strong>Regression (also see Mixed Models and Poisson Distribution)</strong></p>
+<ul>
+<li><p><pkg>WebPower</pkg> all have general methods for various forms of regression. <code>pwr2ppl::pwr.f2.test</code> provides power for comparing dependent coefficients in multiple regression with two or three predictors.</p></li>
+<li><p><pkg>simglm</pkg> both support simulation of regression models with various structures.</p></li>
+<li><p><pkg>Hmisc</pkg> simulates power of a Bayesian odds ordinal logistic model.</p></li>
+<li><p><pkg>MKpower</pkg> for comparing two negative binomial rates</p></li>
+<li><p><pkg>RSPS</pkg> provides an empirical approach for RNA-seq data</p></li>
+</ul></li>
+<li><p><strong>Regression Discontinuity (RD) Design</strong></p>
+<ul>
+<li>Both <pkg>rddapp</pkg> provide tools to perform power, sample size and MDE calculations in RD designs.</li>
+</ul></li>
+<li><p><strong>Repertory Grid Studies</strong></p>
+<ul>
+<li><pkg>gridsampler</pkg> is a simulation tool to facilitate determination of required sample size to achieve category saturation for studies using multiple repertory grids in conjunction with content analysis.</li>
+</ul></li>
+<li><p><strong>Sib Pair Design</strong></p>
+<ul>
+<li><pkg>powerpkg</pkg> computes power of an affected sib pair design.</li>
+</ul></li>
+<li><p><strong>Sign Test</strong></p>
+<ul>
+<li><pkg>FDRsampsize</pkg> provides methods for microarray studies that use the false discovery rate as the final measure of statistical significance.</li>
+</ul></li>
+<li><p><strong>Sobel Test</strong></p>
+<ul>
+<li><pkg>powerMediation</pkg> calculates power for testing a mediation effect based on Sobel’s test.</li>
+</ul></li>
+<li><p><strong>Spatial Clustering</strong></p>
+<ul>
+<li><pkg>sparrpowR</pkg> calculates the statistical power to detect clusters using kernel-based spatial relative risk functions.</li>
+</ul></li>
+<li><p><strong>Structural Equation Modelling (SEM)</strong></p>
+<ul>
+<li><p><pkg>semPower</pkg> provides a-priori, post-hoc, and compromise power-analyses for structural equation models (SEM))</p></li>
+<li><p><pkg>simsem</pkg> provides an easy framework for Monte Carlo simulation in structural equation modeling, which can be used for various purposes, such as such as model fit evaluation, power analysis, or missing data handling and planning.</p></li>
+</ul></li>
+<li><p><strong>Survival analysis</strong></p>
+<ul>
+<li><p><pkg>powerMediation</pkg> calculates power for testing a mediation effect in Cox regression based on Vittinghoff, Sen &amp; Mc-Culloch’s (2009) method.</p></li>
+<li><p><a href="https://CRAN.R-Project.org/package=DelayedEffect.Design">DelayedEffect.Design</a> uses a piecewise weighted log-rank test to properly and efficiently incorporate the delayed effect into the study design.</p></li>
+<li><p><pkg>NPHMC</pkg> calculates sample size of a survival trial with or without cure fractions</p></li>
+<li><p><pkg>npsurvSS</pkg> provides sample size and power calculation for comparing two survival curves, including the difference in (or ratio of) t-year survival, difference in (or ratio of) p-th percentile survival, difference in (or ratio of) restricted mean survival time, and the weighted log-rank test with allowance for flexible accrual, censoring, and survival, and supports simulation methods as well.</p></li>
+<li><p><pkg>powerSurvEpi</pkg> provides power and sample size calculation for survival analysis of epidemiological studies, taking into account the correlation between the covariate of interest and other covariates</p></li>
+<li><p><pkg>SSRMST</pkg> calculates the study sample size and power in designing clinical trials using the difference in RMST. Two types of one-sided tests, non-inferiority and superiority tests, are prepared.</p></li>
+</ul></li>
+<li><p><strong>T-Test</strong></p>
+<ul>
+<li><p>Many packages can calculate power for basic one- and two-sample t-tests: <pkg>pwrAB</pkg>.</p></li>
+<li><p><pkg>PowerTOST</pkg> calculates power for the two-one-sided t-test</p></li>
+<li><p>Simulate power through <pkg>MKpower</pkg> for classical (equal variances), Welch and Hsu T-tests.</p></li>
+<li><p><pkg>ssizeRNA</pkg> computes appropriate sample sizes for two-sample t-test for RNA-seq experiments with fixed or varied set of parameters.</p></li>
+<li><p><pkg>MKmisc</pkg> can also be used for Welch <em>t</em>-tests as well as comparing negative binomial rates.</p></li>
+</ul></li>
+<li><p><strong>TDT Study (transmission disequilibrium test)</strong></p>
+<ul>
+<li><pkg>powerpkg</pkg> calculates of how many TDT trios need to be studied in order to have an adequately powered TDT study.</li>
+</ul></li>
+<li><p><strong>Trend-in-Trend Design</strong></p>
+<ul>
+<li><pkg>TrendInTrend</pkg> provides estimation of causal odds ratio and power calculation given trends in exposure prevalence and outcome frequencies of stratified data.</li>
+</ul></li>
+<li><p><strong>Wald Test</strong></p>
+<ul>
+<li><pkg>SteppedPower</pkg> computes power of a Wald Test given a standard error, an effect size, the degrees of freedom of the t-distribution and a significance level</li>
+</ul></li>
+<li><p><strong>Wilcoxon-Mann-Whitney Test (Wilcoxon Rank Sum Test)</strong></p>
+<ul>
+<li><p><pkg>FDRsampsize</pkg>.</p></li>
+<li><p><pkg>MKpower</pkg>.</p></li>
+<li><p><pkg>WMWssp</pkg> calculates the minimal sample size for the Wilcoxon-Mann-Whitney test that is needed for a given power and two sided type I error rate. The method works for metric data with and without ties, count data, ordered categorical data, and even dichotomous data.</p></li>
+</ul></li>
+<li><p><strong>Wilcoxon Sign Rank Test</strong></p>
+<ul>
+<li><p><pkg>BetaPASS</pkg> will help find the power for a given sample size or the sample size given power, when testing the null hypothesis that the means for the control and treatment groups are equal against a two-sided alternative.</p></li>
+<li><p><pkg>MKpower</pkg>.</p></li>
+<li><p><pkg>samplesize</pkg> works for categorical data and allows for ties.</p></li>
+</ul></li>
+</ul>
+<h4>General simulation packages useful for power analysis</h4>
+<p>In some cases, there are either no analytical solutions (a knowledge gap) or no programmed function of an analytical solution (an implementation gap) in R. Empirical power (i.e., a simulation study of power) can be used in either of these cases, or when the assumptions of the analytical solution are not met. General packages helpful for simulation are shown below; method-specific simulation packages are integrated into the <strong><u>Specific models/methods/tests</u></strong> section above.</p>
+<ul>
+<li><p><pkg>DeclareDesign</pkg> provides a general framework for specifying research designs, simulated based on specified designs, and assessing various properties of the designs, including but not limitde to power.</p></li>
+<li><p><a href="https://github.com/statisfactions/simpr">simpr</a> is a GitHub R package that has a framework to data simulation—based on tidyverse / broom syntax—and can perform power calculations</p></li>
+<li><p>Various general-purpose MonteCarlo simulation packages exist, including <pkg>simstudy</pkg>.</p></li>
+</ul>
+</info>
+<packagelist>
+<pkg>asypow</pkg>
+<pkg>BAEssd</pkg>
+<pkg>bayescount</pkg>
+<pkg>BayesESS</pkg>
+<pkg>BayesianPower</pkg>
+<pkg>BDEsize</pkg>
+<pkg>BetaPASS</pkg>
+<pkg>bimetallic</pkg>
+<pkg>binomSamSize</pkg>
+<pkg>blindrecalc</pkg>
+<pkg>BUCSS</pkg>
+<pkg>CAISEr</pkg>
+<pkg>clusterPower</pkg>
+<pkg>CoRpower</pkg>
+<pkg>CP</pkg>
+<pkg>CRTSize</pkg>
+<pkg>DeclareDesign</pkg>
+<pkg>DelayedEffect.Design</pkg>
+<pkg>easypower</pkg>
+<pkg>EBASS</pkg>
+<pkg>epiR</pkg>
+<pkg>esDesign</pkg>
+<pkg>Exact</pkg>
+<pkg>FDRsampsize</pkg>
+<pkg>genpwr</pkg>
+<pkg>gridsampler</pkg>
+<pkg>GRS.test</pkg>
+<pkg>H2x2Factorial</pkg>
+<pkg>HDDesign</pkg>
+<pkg>HierO</pkg>
+<pkg>Hmisc</pkg>
+<pkg>HMP</pkg>
+<pkg>ICC.Sample.Size</pkg>
+<pkg>kappaSize</pkg>
+<pkg>longpower</pkg>
+<pkg>LPower</pkg>
+<pkg>metapower</pkg>
+<pkg>MIDN</pkg>
+<pkg>MKmisc</pkg>
+<pkg>MKpower</pkg>
+<pkg>MonteCarlo</pkg>
+<pkg>MRTSampleSize</pkg>
+<pkg>MRTSampleSizeBinary</pkg>
+<pkg>NPHMC</pkg>
+<pkg>npsurvSS</pkg>
+<pkg>odr</pkg>
+<pkg>pamm</pkg>
+<pkg>pass.lme</pkg>
+<pkg>PASSED</pkg>
+<pkg>pbatR</pkg>
+<pkg>PharmPow</pkg>
+<pkg>pmsampsize</pkg>
+<pkg>PoweR</pkg>
+<pkg>Power2Stage</pkg>
+<pkg>powerAnalysis</pkg>
+<pkg>powerbydesign</pkg>
+<pkg>powerCompRisk</pkg>
+<pkg>powerGWASinteraction</pkg>
+<pkg>powerLATE</pkg>
+<pkg>powerMediation</pkg>
+<pkg>powerpkg</pkg>
+<pkg>powerSurvEpi</pkg>
+<pkg>PowerTOST</pkg>
+<pkg>PowerUpR</pkg>
+<pkg>pwr</pkg>
+<pkg>pwr2</pkg>
+<pkg>pwr2ppl</pkg>
+<pkg>pwrAB</pkg>
+<pkg>pwrFDR</pkg>
+<pkg>PwrGSD</pkg>
+<pkg>pwrRasch</pkg>
+<pkg>qcapower</pkg>
+<pkg>RCT</pkg>
+<pkg>rdpower</pkg>
+<pkg>rpact</pkg>
+<pkg>rPowerSampleSize</pkg>
+<pkg>RSPS</pkg>
+<pkg>Sample.Size</pkg>
+<pkg>samplesize</pkg>
+<pkg>SampleSize4ClinicalTrials</pkg>
+<pkg>samplesize4surveys</pkg>
+<pkg>samplesizeCMH</pkg>
+<pkg>samplesizelogisticcasecontrol</pkg>
+<pkg>SampleSizeMeans</pkg>
+<pkg>SampleSizeProportions</pkg>
+<pkg>semPower</pkg>
+<pkg>simglm</pkg>
+<pkg>simr</pkg>
+<pkg>simsem</pkg>
+<pkg>simstudy</pkg>
+<pkg>SMARTbayesR</pkg>
+<pkg>SMARTp</pkg>
+<pkg>smartsizer</pkg>
+<pkg>sparrpowR</pkg>
+<pkg>spass</pkg>
+<pkg>ssanv</pkg>
+<pkg>ssd</pkg>
+<pkg>ssev</pkg>
+<pkg>ssize.fdr</pkg>
+<pkg>ssizeRNA</pkg>
+<pkg>ssrm.logmer</pkg>
+<pkg>SSRMST</pkg>
+<pkg>SteppedPower</pkg>
+<pkg>Superpower</pkg>
+<pkg>survSNP</pkg>
+<pkg>swdpwr</pkg>
+<pkg>TrendInTrend</pkg>
+<pkg>WebPower</pkg>
+<pkg>WMWssp</pkg>
+</packagelist>
+<links>
+<p>Tutorials</p>
+<ul>
+<li><p>WebPower has <a href="https://webpower.psychstat.org/wiki/models/index">extensive educational documents for many tests</a> and <a href="https://webpower.psychstat.org/wiki/">a Q&amp;A forum</a></p></li>
+<li><p><a href="https://statmodeling.stat.columbia.edu/2018/03/15/need-16-times-sample-size-estimate-interaction-estimate-main-effect/">Guide to power calculation for statistical interactions</a></p></li>
+</ul>
+<p>References</p>
+<ul>
+<li><p>Lenth, R. V. (2001), “Some Practical Guidelines for Effective Sample Size Determination,” <em>The American Statistician</em>, 55, 187-193.</p></li>
+<li><p>Hoenig, John M. and Heisey, Dennis M. (2001), “The Abuse of Power: The Pervasive Fallacy of Power Calculations for Data Analysis,” <em>The American Statistician</em>, 55, 19-24.</p></li>
+<li><p>Zhang, Z., &amp; Yuan, K.-H. (2018). <a href="https://amzn.to/2V42nFp">Practical Statistical Power Analysis Using Webpower and R</a> (Eds). Granger, IN: ISDSA Press.</p></li>
+<li><p>Liu, X. S. (2013). <a href="http://www.amazon.com/gp/product/1848729812/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1848729812&amp;linkCode=as2&amp;tag=pyschstatorg-20">Statistical Power Analysis for the Social and Behavioral Sciences: Basic and Advanced Techniques</a>. Routledge.</p></li>
+<li><p>Blair, G., Coppock, A., &amp; Humphreys, M. (in press). Research Design: Declare, Diagnose, Redesign. Draft manuscript under advance contract, Princeton University Press. Available at <a href="https://book.declaredesign.org/" class="uri">https://book.declaredesign.org/</a></p></li>
+</ul>
+
+
+
+</links>
+</CRANTaskView>
