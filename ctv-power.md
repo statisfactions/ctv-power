@@ -11,8 +11,8 @@ output:
 <name>PowerAnalysis</name>  
 <topic>Power analysis and sample size calculation</topic>  
 <maintainer email="rwebster@cheo.on.ca">Richard Webster</maintainer>  
-<maintainer email="ecbrown@umn.edu">Ethan C. Brown</maintainer>  
-<version>2021-10-20</version>  
+<maintainer email="ethancbrown@gmail.com">Ethan C. Brown</maintainer>  
+<version>2024-07-01</version>  
 
 <info>
 -->
@@ -32,16 +32,46 @@ related design considerations can:
 
 There are many statistical tests and study designs, so subsequently
 there is a vast array of statistical power calculations. Power
-calculations may be I) an analytic formula approach, II) a simulation
-approach, or III) a combination of the two. While the analytic formula
+calculations may be an analytic formula approach, a simulation
+approach, or a combination of the two. While the analytic formula
 approach has a theoretical foundation, often for complex models there
-are no analytical solutions available. This page covers both analytical
-and simulation-based methods for power analysis, as well as several more
-general simulation packages that are useful for power analysis.
+are no analytical solutions available.
 
-This Task View page hopes to make it easier to find sample size
-functionality in R. *<u>Please let us know</u>* if we have omitted something of importance,
-for instance a new package that should be mentioned here by submitting an issue or pull request on our [Github page](https://github.com/statisfactions/ctv-power).
+We start with several general-purpose simulation packages that are useful for 
+power analysis. Although simulation-based power analysis can be performed in 
+base R, several packages provide frameworks that make it easier to manage the 
+full workflow of implementing an arbitrary data-generating mechanism, varying 
+parameters, and gathering/displaying results.
+
+The remainder of the Task View is devoted to power/study design packages that 
+are specific to a specific type of model or analysis technique. These are
+organized by overall category. We conclude with several useful links for 
+performing analysis in R.
+
+Please let us know if we have omitted something of importance,
+for instance a new package that should be mentioned here, by submitting an issue or pull request on our [Github page](https://github.com/statisfactions/ctv-power).
+
+#### General simulation study packages useful for power analysis
+
+General-purpose simulation study packages facilitate understanding of study design 
+and can accomodated arbitrary data-generating mechanisms and model-fitting
+techniques. Although many packages can be useful at various stages of a 
+simulation study, we only include packages here that are specifically for managing
+the workflow of a simulation study. Packages that use simulation methods to
+evaluate a specific type of model are integrated in to the **<u>Specific models/methods/tests</u>** section below.
+
+-   [DeclareDesign](https://CRAN.R-Project.org/package=DeclareDesign) provides a general framework for specifying research designs, simulated based on specified designs, and assessing various properties of the designs, including but not limited to power.
+
+-   [simpr](https://github.com/statisfactions/simpr) is a GitHub R package that has a framework to data simulation—based on tidyverse / broom syntax—and can perform power calculations
+
+-   [MonteCarlo](https://CRAN.R-Project.org/package=MonteCarlo) provides functions for running
+custom data-generating functions on a parameter grid and summarizing the results in a LaTeX 
+table.
+
+-   [simstudy](https://CRAN.R-Project.org/package=simstudy) provides a syntax for
+defining datasets and referencing parameter values when generated within a for() loop, 
+and includes support for 15 different types of distributions that can be used in studies, with the assumption that the model and the population of the investigated study should match.
+
 
 #### Specific models/methods/tests (ordered alphabetically)
 
@@ -766,21 +796,5 @@ ordered alphabetically by statistical test.
     -   [MKpower](https://CRAN.R-Project.org/package=MKpower).
 
     -   [samplesize](https://CRAN.R-Project.org/package=samplesize) works for categorical data and allows for ties.
-
-#### General simulation packages useful for power analysis
-
-In some cases, there are either no analytical solutions (a knowledge
-gap) or no programmed function of an analytical solution (an
-implementation gap) in R. Empirical power (i.e., a simulation study of
- power) can be used in either of these cases, or when the assumptions
-of the analytical solution are not met. General packages helpful for
-simulation are shown below; method-specific simulation packages are integrated into
-the **<u>Specific models/methods/tests</u>** section above.
-
--   [DeclareDesign](https://CRAN.R-Project.org/package=DeclareDesign) provides a general framework for specifying research designs, simulated based on specified designs, and assessing various properties of the designs, including but not limited to power.
-
--   [simpr](https://github.com/statisfactions/simpr) is a GitHub R package that has a framework to data simulation—based on tidyverse / broom syntax—and can perform power calculations
-
--   Various general-purpose MonteCarlo simulation packages exist, including [MonteCarlo](https://CRAN.R-Project.org/package=MonteCarlo) and [simstudy](https://CRAN.R-Project.org/package=simstudy).
 
 <!-- Links Moved to Separate document, ctv-power-links.md -->
